@@ -2,74 +2,107 @@ using benjohnson;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class RoomManager : Singleton<RoomManager>
 {
     Room currentRoom;
-    [SerializeField] List<Room> rooms;
+    List<Room> rooms;
 
-    // Room entities
+    [Header("Entity Prefabs")]
     [SerializeField] List<Entity> entityPrefabs;
+    Dictionary<string, Entity> ed = new Dictionary<string, Entity>();
+
+    [Header("Stage Generation Settings")]
+    [SerializeField, Range(1, 10)] int maxDepth;
+    [SerializeField, Range(1, 4)] int maxDoors;
+
+    // Generation variables
+    List<Door> doorsToFill; // List of doors with no destination yet, generate a room for these doors
 
     // Components
     GridLayout gridLayout;
 
     void Start()
     {
-        // Assign Components
+        // Initialize variables
+        rooms = new List<Room>();
+        ed = new Dictionary<string, Entity>();
+        for (int i = 0; i < entityPrefabs.Count; i++)
+            ed.Add(entityPrefabs[i].name, entityPrefabs[i]);
+        doorsToFill = new List<Door>();
+
+        // Assign components
         gridLayout = GetComponent<GridLayout>();
 
-        CreateRoom(new List<int> { 0, 1, 1 });
-        CreateRoom(new List<int> { 0, 1 });
-        CreateRoom(new List<int> { 0, 2, 2, 2 });
+        // Generate dungeon
+        // Generate first room
+        CreateRoom(0);
+        // Iteratively generate layers
+        //GenerateLayer(1);
     }
 
-    private void Update()
+    void GenerateLayer(int depth)
     {
-        if (Keyboard.current.digit0Key.wasPressedThisFrame)
-            EnterRoom(0);
-        if (Keyboard.current.digit1Key.wasPressedThisFrame)
-            EnterRoom(1);
-        if (Keyboard.current.digit2Key.wasPressedThisFrame)
-            EnterRoom(2);
+        // Stop?
+        if (depth > maxDepth || doorsToFill.Count <= 0) return;
+
+        List<Door> _doorsToFill = doorsToFill;
+        doorsToFill.Clear();
+        for (int i = 0; i < _doorsToFill.Count; i++)
+        {
+
+        }
+
+        // Generate next layer
+        GenerateLayer(depth + 1);
     }
 
-    public void EnterRoom(int id)
+    public void EnterRoom(Room nextRoom)
     {
         // Check if room exists
-        if (id > rooms.Count || rooms[id] == null) return;
+        if (nextRoom == null) return;
 
         // Exit current room
         currentRoom?.ExitRoom();
 
         // Enter next room
-        currentRoom = rooms[id];
+        currentRoom = nextRoom;
         currentRoom.EnterRoom();
 
         // Update grid
         gridLayout.ArrangeGrid();
     }
 
-    public void CreateRoom(List<int> entityIDs)
+    public Room CreateRoom(int depth)
     {
-        List<Entity> _entities = new List<Entity>();
-        for (int i = 0; i < entityIDs.Count; i++)
-            _entities.Add(entityPrefabs[entityIDs[i]]);
-        CreateRoom(_entities);
+        Room newRoom = new Room(depth);
+        rooms.Add(newRoom);
+
+        // If not starting room, spawn back door
+        if (depth > 0)
+        {
+            Entity newDoor = SpawnedEntity(ed["back"].gameObject);
+            newRoom.AddEntity(newDoor);
+            // back
+        }
+        // Spawn doors according to depth
+        for (int i = 0; i < maxDoors; i++)
+        {
+            if (Random.Range(0.0f, 1.0f) <= 1 - ((float)depth / (float)maxDepth))
+            {
+                Entity newDoor = SpawnedEntity(ed["door"].gameObject);
+                newRoom.AddEntity(newDoor);
+                doorsToFill.Add(newDoor.GetComponent<Door>());
+            }
+        }
+
+        return newRoom;
     }
 
-    public void CreateRoom(List<Entity> entities)
+    Entity SpawnedEntity(GameObject entityToSpawn)
     {
-        // Spawn entities to world and disable
-        List<Entity> _entities = new List<Entity>();
-        for (int i = 0; i < entities.Count; i++)
-        {
-            Entity _entity = Instantiate(entities[i].gameObject).GetComponent<Entity>();
-            _entity.IsEnabled(false);
-            _entities.Add(_entity);
-        }
-        // Create room
-        rooms.Add(new Room(_entities));
+        Entity _entity = Instantiate(entityToSpawn).GetComponent<Entity>();
+        _entity.IsEnabled(false);
+        return _entity;
     }
 }

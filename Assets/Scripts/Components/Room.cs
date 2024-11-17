@@ -2,29 +2,36 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
 public class Room
 {
-    [SerializeField] List<Entity> entities;
+    public List<Entity> roomEntities;
 
-    public Room(List<Entity> roomEntities)
+    // Variables
+    public int depth;
+
+    public Room(int depth)
     {
-        entities = roomEntities;
+        this.depth = depth;
+    }
+
+    public void AddEntity(Entity entity)
+    {
+        roomEntities.Add(entity);
     }
 
     public void EnterRoom()
     {
-        for (int i = 0; i < entities.Count; i++)
+        for (int i = 0; i < roomEntities.Count; i++)
         {
-            entities[i].IsEnabled(true, RoomManager.instance.transform);
+            roomEntities[i].IsEnabled(true, RoomManager.instance.transform);
         }
     }
 
     public void ExitRoom()
     {
-        for (int i = 0; i < entities.Count; i++)
+        for (int i = 0; i < roomEntities.Count; i++)
         {
-            entities[i].IsEnabled(false);
+            roomEntities[i].IsEnabled(false);
         }
     }
 }

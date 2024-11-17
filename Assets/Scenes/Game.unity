@@ -212,11 +212,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7986df01aed52934d8a4b0b386726caf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rooms: []
   entityPrefabs:
   - {fileID: 1306959757903418363, guid: 20d44f7a86a950c4891754cc54761227, type: 3}
   - {fileID: 1306959757903418363, guid: 93f46569de4113b43b1cc98309bcd6fa, type: 3}
   - {fileID: 1306959757903418363, guid: 405e8f8a5c6fd124082c280b2f61f489, type: 3}
+  maxDepth: 2
+  maxDoors: 2
 --- !u!114 &482014792
 MonoBehaviour:
   m_ObjectHideFlags: 0
