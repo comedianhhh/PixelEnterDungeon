@@ -2,13 +2,9 @@ using UnityEngine;
 
 public class Entity : Clickable
 {
-    public void Disable()
+    public void IsEnabled(bool enabled, Transform parent = null)
     {
-        gameObject.SetActive(false);
-    }
-
-    public void Enable()
-    {
-        gameObject.SetActive(true);
+        transform.parent = parent;
+        gameObject.SetActive(enabled);
     }
 }

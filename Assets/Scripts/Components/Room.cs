@@ -1,28 +1,30 @@
+using System;
 using System.Collections.Generic;
+using UnityEngine;
 
+[System.Serializable]
 public class Room
 {
-    List<Entity> entities;
+    [SerializeField] List<Entity> entities;
 
-    /// <summary>
-    /// Disables all gameobject entities in room
-    /// </summary>
-    public void DisableRoom()
+    public Room(List<Entity> roomEntities)
+    {
+        entities = roomEntities;
+    }
+
+    public void EnterRoom()
     {
         for (int i = 0; i < entities.Count; i++)
         {
-            entities[i].Disable();
+            entities[i].IsEnabled(true, RoomManager.instance.transform);
         }
     }
 
-    /// <summary>
-    /// Enables all gameobject entities in room
-    /// </summary>
-    public void EnableRoom()
+    public void ExitRoom()
     {
         for (int i = 0; i < entities.Count; i++)
         {
-            entities[i].Enable();
+            entities[i].IsEnabled(false);
         }
     }
 }

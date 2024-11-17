@@ -6,11 +6,6 @@ public class GridLayout : MonoBehaviour
     public Vector2 spacing = new Vector2(1.0f, 1.0f);
     public Vector2 offset = Vector2.zero;
 
-    private void Update()
-    {
-        ArrangeGrid();
-    }
-
     public void ArrangeGrid()
     {
         int childCount = transform.childCount;
