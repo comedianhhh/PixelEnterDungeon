@@ -5,18 +5,16 @@ using UnityEngine;
 public class Room
 {
     public List<Entity> roomEntities;
+    public Room parentRoom;
 
     // Variables
     public int depth;
 
-    public Room(int depth)
+    public Room(int depth, Room parentRoom)
     {
+        roomEntities = new List<Entity>();
         this.depth = depth;
-    }
-
-    public void AddEntity(Entity entity)
-    {
-        roomEntities.Add(entity);
+        this.parentRoom = parentRoom;
     }
 
     public void EnterRoom()

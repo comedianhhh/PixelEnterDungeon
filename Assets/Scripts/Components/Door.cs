@@ -6,13 +6,8 @@ public class Door : MonoBehaviour
 {
     [HideInInspector] public Room destination;
 
-    public void EnterPreviousRoom()
+    public void EnterRoom()
     {
-
-    }
-
-    public void EnterNextRoom()
-    {
-
+        RoomManager.instance.EnterRoom(destination);
     }
 }

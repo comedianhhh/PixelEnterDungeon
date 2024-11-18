@@ -388,7 +388,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: numbers_12
+      name: h
       rect:
         serializedVersion: 2
         x: 6
@@ -409,7 +409,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: numbers_13
+      name: d
       rect:
         serializedVersion: 2
         x: 9
@@ -578,8 +578,8 @@ TextureImporter:
       7: 1101360872
       8: -2083208325
       9: 1701529130
-      numbers_12: -27277331
-      numbers_13: 2120114649
+      d: 2120114649
+      h: -27277331
       numbers_14: 877683196
       numbers_15: 972258955
       numbers_16: 1494252104

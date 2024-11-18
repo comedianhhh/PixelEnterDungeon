@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 482014791}
   - component: {fileID: 482014792}
   m_Layer: 0
-  m_Name: Room
+  m_Name: Room Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -216,8 +216,8 @@ MonoBehaviour:
   - {fileID: 1306959757903418363, guid: 20d44f7a86a950c4891754cc54761227, type: 3}
   - {fileID: 1306959757903418363, guid: 93f46569de4113b43b1cc98309bcd6fa, type: 3}
   - {fileID: 1306959757903418363, guid: 405e8f8a5c6fd124082c280b2f61f489, type: 3}
-  maxDepth: 2
-  maxDoors: 2
+  maxDepth: 4
+  maxDoors: 3
 --- !u!114 &482014792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,10 +319,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0.055555556
-    width: 1
-    height: 0.8888889
+    x: 0.0038729666
+    y: 0.05922865
+    width: 0.99147946
+    height: 0.8815427
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
