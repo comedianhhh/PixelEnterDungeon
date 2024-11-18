@@ -8,6 +8,6 @@ public class Door : MonoBehaviour
 
     public void EnterRoom()
     {
-        RoomManager.instance.EnterRoom(destination);
+        DungeonManager.instance.EnterRoom(destination);
     }
 }
