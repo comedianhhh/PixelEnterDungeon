@@ -13,7 +13,7 @@ public class DungeonManager : Singleton<DungeonManager>
     Dictionary<string, Entity> ed = new Dictionary<string, Entity>();
 
     [Header("Stage Generation Settings")]
-    [SerializeField, Range(1, 10)] int maxDepth;
+    [SerializeField, Range(1, 5)] int maxDepth;
     [SerializeField, Range(1, 4)] int maxDoors;
 
     // Generation variables

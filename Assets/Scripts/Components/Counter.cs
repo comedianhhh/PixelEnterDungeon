@@ -7,7 +7,7 @@ public class Counter : MonoBehaviour
     [SerializeField] GameObject numberPrefab;
     [SerializeField] float spacing = 1.0f;
 
-    public void SetText(string text, Color color)
+    public void SetText(string text, int color = 0)
     {
         // Clear numbers
         foreach (Transform child in transform)
@@ -16,21 +16,19 @@ public class Counter : MonoBehaviour
         // Create new numbers
         for (int i = 0; i < text.Length; i++)
         {
-            char c = text[i];
+            string str = "numbers_" + (text[i] - 48 + (color * 10)).ToString();
 
             GameObject number = Instantiate(numberPrefab, transform);
             number.transform.localPosition = new Vector3(i * spacing, 0, 0);
-            SpriteRenderer sr = number.GetComponent<SpriteRenderer>();
-            sr.sprite = CharToSprite(c);
-            sr.color = color;
+            number.GetComponent<SpriteRenderer>().sprite = CharToSprite(str);
         }
     }
 
-    private Sprite CharToSprite(char c)
+    private Sprite CharToSprite(string str)
     {
         for (int i = 0; i < characters.Count; i++)
         {
-            if (characters[i].name[0] == c)
+            if (characters[i].name == str)
                 return characters[i];
         }
         return null;

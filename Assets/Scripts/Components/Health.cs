@@ -20,9 +20,9 @@ public class Health : MonoBehaviour
         if (currentHealth <= 0)
         {
             currentHealth = 0;
-            UpdateCounter();
             Kill();
         }
+        UpdateCounter();
     }
 
     public void Heal(int value)
@@ -31,17 +31,18 @@ public class Health : MonoBehaviour
         if (currentHealth > maxHealth)
         {
             currentHealth = maxHealth;
-            UpdateCounter();
         }
+        UpdateCounter();
     }
 
     void UpdateCounter()
     {
-        counter.SetText("h" + currentHealth.ToString(), Color.red);
+        if (counter == null) return;
+        counter.SetText(currentHealth.ToString(), 0);
     }
 
     public void Kill()
     {
-
+        GetComponent<Entity>().Remove();
     }
 }

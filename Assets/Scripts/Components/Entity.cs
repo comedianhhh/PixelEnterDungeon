@@ -9,4 +9,13 @@ public class Entity : Clickable
         transform.parent = parent;
         gameObject.SetActive(enabled);
     }
+
+    public void Remove()
+    {
+        room.roomEntities.Remove(this);
+        IsEnabled(false);
+        DungeonManager.instance.GetComponent<GridLayout>().ArrangeGrid();
+
+        Destroy(gameObject);
+    }
 }
