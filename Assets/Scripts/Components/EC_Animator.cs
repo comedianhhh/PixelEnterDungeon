@@ -19,7 +19,7 @@ public class EC_Animator : MonoBehaviour
     {
         // Set components
         sr = GetComponent<SpriteRenderer>();
-        pt = GetComponentInParent<Entity>().transform;
+        pt = GetComponentInParent<EC_Entity>().transform;
 
         // Initialize variables
         targetScale = Vector2.one;

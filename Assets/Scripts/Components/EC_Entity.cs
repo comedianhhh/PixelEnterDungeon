@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Entity : Clickable
+public class EC_Entity : Clickable
 {
     [HideInInspector] public Room room;
 

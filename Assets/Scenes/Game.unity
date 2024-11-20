@@ -382,8 +382,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 6
-      minScalar: 4
+      scalar: 12
+      minScalar: 8
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -488,7 +488,7 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 0
-      minColor: {r: 1, g: 1, b: 1, a: 1}
+      minColor: {r: 0.17254902, g: 0.10588236, b: 0.18039216, a: 1}
       maxColor: {r: 0.34117648, g: 0.14509805, b: 0.23137257, a: 1}
       maxGradient:
         serializedVersion: 2
@@ -1136,7 +1136,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 400
+      scalar: 200
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -5088,13 +5088,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 482014789}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7986df01aed52934d8a4b0b386726caf, type: 3}
+  m_Script: {fileID: 11500000, guid: 6dc90566e32a8fe4986736c3b3e47af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  entityPrefabs:
-  - {fileID: 1306959757903418363, guid: 20d44f7a86a950c4891754cc54761227, type: 3}
-  - {fileID: 1306959757903418363, guid: 93f46569de4113b43b1cc98309bcd6fa, type: 3}
-  - {fileID: 1306959757903418363, guid: f04685a0609fdab44be7d9b1c64b6368, type: 3}
+  backDoorPrefab: {fileID: 1773695994068289626, guid: 20d44f7a86a950c4891754cc54761227, type: 3}
+  doorPrefab: {fileID: 1306959757903418363, guid: 93f46569de4113b43b1cc98309bcd6fa, type: 3}
+  bossDoorPrefab: {fileID: 1679900098687151132, guid: 3d453848671488d48b6166b527997a4d, type: 3}
+  bossKeyPrefab: {fileID: 1679900098687151132, guid: 54961bc2d045aca41bd8006a3dbb17e7, type: 3}
+  roomDepth:
+  - rooms: []
+  - rooms:
+    - {fileID: 11400000, guid: 365a5449d5d99b34cb4d39cfa70c1a31, type: 2}
+  - rooms:
+    - {fileID: 11400000, guid: 13bc1947c629d7a48a254612213203ee, type: 2}
+  - rooms:
+    - {fileID: 11400000, guid: 1a22e26e5b47c7a4293d866f9ee116ce, type: 2}
+  - rooms:
+    - {fileID: 11400000, guid: f056e19c44a43534db75b5b7ffe54c00, type: 2}
   maxDepth: 4
   maxDoors: 2
 --- !u!114 &482014792

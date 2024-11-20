@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Room
 {
-    public List<Entity> roomEntities;
+    public List<EC_Entity> roomEntities;
     public Room parentRoom;
 
     // Variables
@@ -12,7 +12,7 @@ public class Room
 
     public Room(int depth, Room parentRoom)
     {
-        roomEntities = new List<Entity>();
+        roomEntities = new List<EC_Entity>();
         this.depth = depth;
         this.parentRoom = parentRoom;
     }

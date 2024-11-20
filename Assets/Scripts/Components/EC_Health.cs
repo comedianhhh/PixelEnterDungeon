@@ -43,6 +43,6 @@ public class EC_Health : MonoBehaviour
 
     public void Kill()
     {
-        GetComponent<Entity>().Remove();
+        GetComponent<EC_Entity>().Remove();
     }
 }
