@@ -177,17 +177,6 @@ public class DungeonManager : Singleton<DungeonManager>
         return _room;
     }
 
-    [System.Serializable] class RoomGroup
-    {
-        public List<RoomSO> rooms = new List<RoomSO>();
-
-        public RoomSO RandomRoom()
-        {
-            int rand = Random.Range(0, rooms.Count);
-            return rooms[rand];
-        }
-    }
-
     /// <summary>
     /// Returns list of rooms at desired depth excluding list of excluded rooms, if no valid rooms exist
     /// </summary>
@@ -227,4 +216,16 @@ public class DungeonManager : Singleton<DungeonManager>
         _entity.room = room;
         return _entity;
     }
+
+    [System.Serializable] class RoomGroup
+    {
+        public List<RoomSO> rooms = new List<RoomSO>();
+
+        public RoomSO RandomRoom()
+        {
+            int rand = Random.Range(0, rooms.Count);
+            return rooms[rand];
+        }
+    }
+
 }

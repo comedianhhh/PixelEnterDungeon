@@ -5105,6 +5105,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 1a22e26e5b47c7a4293d866f9ee116ce, type: 2}
   - rooms:
     - {fileID: 11400000, guid: f056e19c44a43534db75b5b7ffe54c00, type: 2}
+  bossRooms:
+  - rooms:
+    - {fileID: 11400000, guid: 365a5449d5d99b34cb4d39cfa70c1a31, type: 2}
   maxDepth: 4
   maxDoors: 2
 --- !u!114 &482014792
