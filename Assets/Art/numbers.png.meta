@@ -262,7 +262,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: numbers_0
+      name: numbers_00
       rect:
         serializedVersion: 2
         x: 0
@@ -283,7 +283,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: numbers_1
+      name: numbers_01
       rect:
         serializedVersion: 2
         x: 5
@@ -304,7 +304,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: numbers_2
+      name: numbers_02
       rect:
         serializedVersion: 2
         x: 10
@@ -325,7 +325,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: numbers_3
+      name: numbers_03
       rect:
         serializedVersion: 2
         x: 15
@@ -346,7 +346,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: numbers_4
+      name: numbers_04
       rect:
         serializedVersion: 2
         x: 20
@@ -367,7 +367,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: numbers_5
+      name: numbers_05
       rect:
         serializedVersion: 2
         x: 25
@@ -388,7 +388,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: numbers_6
+      name: numbers_06
       rect:
         serializedVersion: 2
         x: 30
@@ -409,7 +409,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: numbers_7
+      name: numbers_07
       rect:
         serializedVersion: 2
         x: 35
@@ -430,7 +430,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: numbers_8
+      name: numbers_08
       rect:
         serializedVersion: 2
         x: 40
@@ -451,7 +451,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: numbers_9
+      name: numbers_09
       rect:
         serializedVersion: 2
         x: 45
@@ -986,8 +986,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      numbers_0: 1184239072
-      numbers_1: -441505722
+      numbers_00: 1184239072
+      numbers_01: -441505722
+      numbers_02: 974438951
+      numbers_03: 2141052469
+      numbers_04: -1154383830
+      numbers_05: 1144417808
+      numbers_06: 1126421471
+      numbers_07: 1368251378
+      numbers_08: -650898658
+      numbers_09: 1271132398
       numbers_10: 251330441
       numbers_11: -1342737992
       numbers_12: 1026178363
@@ -998,7 +1006,6 @@ TextureImporter:
       numbers_17: 1149781628
       numbers_18: -164930125
       numbers_19: 734012905
-      numbers_2: 974438951
       numbers_20: -643001610
       numbers_21: -115407340
       numbers_22: -1852579487
@@ -1009,7 +1016,6 @@ TextureImporter:
       numbers_27: -1341292534
       numbers_28: 2093938634
       numbers_29: 1393469808
-      numbers_3: 2141052469
       numbers_30: -1971146619
       numbers_31: -1030413545
       numbers_32: 884145248
@@ -1020,12 +1026,6 @@ TextureImporter:
       numbers_37: 1898425128
       numbers_38: -2014326574
       numbers_39: -2110520552
-      numbers_4: -1154383830
-      numbers_5: 1144417808
-      numbers_6: 1126421471
-      numbers_7: 1368251378
-      numbers_8: -650898658
-      numbers_9: 1271132398
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

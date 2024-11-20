@@ -102,7 +102,13 @@ public class DungeonManager : Singleton<DungeonManager>
             }
         }
         // !!!!!!!!!!!!!!!!!!!!!!!!!!! FILL ROOM WITH STUFF HERE !!!!!!!!!!!!!!!!!!!!!!!!!!!
-        SpawnEntity(ed["heart"], newRoom);
+        SpawnEntity(ed["test"], newRoom);
+        SpawnEntity(ed["test"], newRoom);
+        SpawnEntity(ed["test"], newRoom);
+        SpawnEntity(ed["test"], newRoom);
+        SpawnEntity(ed["test"], newRoom);
+        SpawnEntity(ed["test"], newRoom);
+        SpawnEntity(ed["test"], newRoom);
         // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
         return newRoom;

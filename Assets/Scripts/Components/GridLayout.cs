@@ -32,12 +32,11 @@ public class GridLayout : MonoBehaviour
             Vector2 centerOffset = new Vector2(rowWidth / 2, gridHeight / 2);
 
             // Set the new position for the child
-            Vector3 newPosition = new Vector3(
+            Vector2 newPosition = new Vector2(
                 column * spacing.x - centerOffset.x + offset.x,
-                -row * spacing.y + centerOffset.y + offset.y,
-                0
+                -row * spacing.y + centerOffset.y + offset.y
             );
-            child.localPosition = newPosition;
+            child.GetComponentInChildren<EC_Animator>().SetTargetPosition(newPosition);
         }
     }
 }

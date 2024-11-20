@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public class EC_Health : MonoBehaviour
 {
     public int maxHealth;
     int currentHealth;
@@ -38,7 +38,7 @@ public class Health : MonoBehaviour
     void UpdateCounter()
     {
         if (counter == null) return;
-        counter.SetText(currentHealth.ToString(), 0);
+        counter.SetText(currentHealth.ToString(), "Cards", 0);
     }
 
     public void Kill()
