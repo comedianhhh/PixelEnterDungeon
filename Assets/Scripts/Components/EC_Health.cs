@@ -38,7 +38,7 @@ public class EC_Health : MonoBehaviour
     void UpdateCounter()
     {
         if (counter == null) return;
-        counter.SetText(currentHealth.ToString(), "Cards", 0);
+        counter.SetText(currentHealth.ToString(), 0);
     }
 
     public void Kill()

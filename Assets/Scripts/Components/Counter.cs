@@ -7,7 +7,7 @@ public class Counter : MonoBehaviour
     [SerializeField] GameObject numberPrefab;
     [SerializeField] float spacing;
 
-    public void SetText(string text, string sortingLayer, int color = 0)
+    public void SetText(string text, int color = 0)
     {
         // Clear numbers
         foreach (Transform child in transform)
@@ -20,9 +20,7 @@ public class Counter : MonoBehaviour
 
             GameObject number = Instantiate(numberPrefab, transform);
             number.transform.localPosition = new Vector3(i * spacing, 0, 0);
-            SpriteRenderer sr = number.GetComponent<SpriteRenderer>();
-            sr.sprite = CharToSprite(str);
-            sr.sortingLayerName = sortingLayer;
+            number.GetComponent<SpriteRenderer>().sprite = CharToSprite(str);
         }
     }
 

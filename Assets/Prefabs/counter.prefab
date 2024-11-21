@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6334677444644780400}
   - component: {fileID: 4472601411877863062}
   m_Layer: 0
-  m_Name: card_counter
+  m_Name: counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
