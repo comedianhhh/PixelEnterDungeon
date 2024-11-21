@@ -119,7 +119,7 @@ public class DungeonManager : Singleton<DungeonManager>
         currentRoom.EnterRoom();
 
         // Update grid
-        gridLayout.ArrangeGrid();
+        gridLayout.ArrangeGrid(true);
     }
 
     /// <summary>
@@ -148,7 +148,7 @@ public class DungeonManager : Singleton<DungeonManager>
         /******************************* FILL ROOM WITH STUFF HERE *******************************/
         if (_depth > 0)
         {
-            List<EC_Entity> entities = roomDepth[_depth].RandomRoom().entities;
+            List<EC_Entity> entities = roomDepth[_depth - 1].RandomRoom().entities;
             for (int i = 0; i < entities.Count; i++)
                 SpawnEntity(entities[i], _room);
         }
@@ -227,5 +227,4 @@ public class DungeonManager : Singleton<DungeonManager>
             return rooms[rand];
         }
     }
-
 }

@@ -5089,7 +5089,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 482014790}
-  - component: {fileID: 482014791}
+  - component: {fileID: 482014793}
   - component: {fileID: 482014792}
   m_Layer: 0
   m_Name: Room Manager
@@ -5113,37 +5113,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &482014791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 482014789}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc90566e32a8fe4986736c3b3e47af8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  backDoorPrefab: {fileID: 1773695994068289626, guid: 20d44f7a86a950c4891754cc54761227, type: 3}
-  doorPrefab: {fileID: 1306959757903418363, guid: 93f46569de4113b43b1cc98309bcd6fa, type: 3}
-  bossDoorPrefab: {fileID: 1679900098687151132, guid: 3d453848671488d48b6166b527997a4d, type: 3}
-  bossKeyPrefab: {fileID: 1679900098687151132, guid: 54961bc2d045aca41bd8006a3dbb17e7, type: 3}
-  roomDepth:
-  - rooms: []
-  - rooms:
-    - {fileID: 11400000, guid: 365a5449d5d99b34cb4d39cfa70c1a31, type: 2}
-  - rooms:
-    - {fileID: 11400000, guid: 13bc1947c629d7a48a254612213203ee, type: 2}
-  - rooms:
-    - {fileID: 11400000, guid: 1a22e26e5b47c7a4293d866f9ee116ce, type: 2}
-  - rooms:
-    - {fileID: 11400000, guid: f056e19c44a43534db75b5b7ffe54c00, type: 2}
-  bossRooms:
-  - rooms:
-    - {fileID: 11400000, guid: 365a5449d5d99b34cb4d39cfa70c1a31, type: 2}
-  maxDepth: 4
-  maxDoors: 2
 --- !u!114 &482014792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5159,6 +5128,36 @@ MonoBehaviour:
   maxColumns: 4
   spacing: {x: 4.5, y: 4.25}
   offset: {x: 0, y: 0}
+--- !u!114 &482014793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482014789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7986df01aed52934d8a4b0b386726caf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backDoorPrefab: {fileID: 1773695994068289626, guid: 20d44f7a86a950c4891754cc54761227, type: 3}
+  doorPrefab: {fileID: 1306959757903418363, guid: 93f46569de4113b43b1cc98309bcd6fa, type: 3}
+  bossDoorPrefab: {fileID: 1679900098687151132, guid: 3d453848671488d48b6166b527997a4d, type: 3}
+  bossKeyPrefab: {fileID: 1679900098687151132, guid: 54961bc2d045aca41bd8006a3dbb17e7, type: 3}
+  roomDepth:
+  - rooms:
+    - {fileID: 11400000, guid: 365a5449d5d99b34cb4d39cfa70c1a31, type: 2}
+  - rooms:
+    - {fileID: 11400000, guid: 13bc1947c629d7a48a254612213203ee, type: 2}
+  - rooms:
+    - {fileID: 11400000, guid: 1a22e26e5b47c7a4293d866f9ee116ce, type: 2}
+  - rooms:
+    - {fileID: 11400000, guid: f056e19c44a43534db75b5b7ffe54c00, type: 2}
+  bossRooms:
+  - rooms:
+    - {fileID: 11400000, guid: 365a5449d5d99b34cb4d39cfa70c1a31, type: 2}
+  maxDepth: 4
+  maxDoors: 2
 --- !u!1001 &1038816637
 PrefabInstance:
   m_ObjectHideFlags: 0

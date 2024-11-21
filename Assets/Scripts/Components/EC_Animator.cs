@@ -20,10 +20,8 @@ public class EC_Animator : MonoBehaviour
         pt.localPosition = Vector2.Lerp(pt.localPosition, targetPosition, Time.deltaTime * 12);
     }
 
-    public void SetTargetPosition(Vector2 pos, bool force = false)
+    public void SetTargetPosition(Vector2 pos)
     {
         targetPosition = pos;
-        if (force)
-            pt.localPosition = pos;
     }
 }

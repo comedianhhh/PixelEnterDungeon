@@ -6,7 +6,7 @@ public class GridLayout : MonoBehaviour
     public Vector2 spacing = new Vector2(1.0f, 1.0f);
     public Vector2 offset = Vector2.zero;
 
-    public void ArrangeGrid()
+    public void ArrangeGrid(bool _force = false)
     {
         int childCount = transform.childCount;
 
@@ -37,6 +37,7 @@ public class GridLayout : MonoBehaviour
                 -row * spacing.y + centerOffset.y + offset.y
             );
             child.GetComponentInChildren<EC_Animator>().SetTargetPosition(newPosition);
+            if (_force) child.transform.localPosition = newPosition;
         }
     }
 }
