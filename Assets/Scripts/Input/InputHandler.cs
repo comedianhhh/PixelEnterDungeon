@@ -21,7 +21,17 @@ public class InputHandler : MonoBehaviour
         _currentClickable = CurrentClickable();
 
         if (Mouse.current.leftButton.wasPressedThisFrame)
-            _currentClickable?.Click();
+        {
+            // Clickable is an entity, check if enemy turn
+            if (_currentClickable is EC_Entity && !TurnManager.instance.StateIs("Enemy"))
+            {
+                _currentClickable?.Click();
+                TurnManager.instance.PlayerUsedAction = true;
+            }
+            // Click clickable
+            else
+                _currentClickable?.Click();
+        }
 
         _tooltip.transform.position = MouseWorldPosition();
         _tooltip.sprite = _currentClickable?.tooltip;
@@ -33,9 +43,9 @@ public class InputHandler : MonoBehaviour
 
         if (!rayHit.collider) return null;
 
-        Clickable clicked = rayHit.collider.GetComponent<Clickable>();
+        Clickable clickable = rayHit.collider.GetComponent<Clickable>();
 
-        return clicked;
+        return clickable;
     }
 
     public Vector2 MouseScreenPosition()

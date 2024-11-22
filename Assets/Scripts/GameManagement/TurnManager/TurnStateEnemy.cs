@@ -11,7 +11,10 @@ public class TurnStateEnemy : TurnBaseState
 
     public override void EnterState()
     {
-
+        _hostiles = DungeonManager.instance.CurrentRoom.GetHostiles();
+        for (int i = 0; i < _hostiles.Count; i++)
+            _hostiles[i].Attack();
+        _hostiles.Clear();
     }
 
     public override void ExitState()
@@ -24,5 +27,9 @@ public class TurnStateEnemy : TurnBaseState
         // Exit combat?
         if (DungeonManager.instance.CurrentRoom.Clear)
             SwitchState("Idle");
+
+        // Player turn?
+        if (_hostiles.Count <= 0)
+            SwitchState("Player");
     }
 }

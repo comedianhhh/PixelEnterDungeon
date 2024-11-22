@@ -8,7 +8,7 @@ public class TurnStatePlayer : TurnBaseState
 
     public override void EnterState()
     {
-
+        _ctx.PlayerUsedAction = false;
     }
 
     public override void ExitState()
@@ -21,5 +21,9 @@ public class TurnStatePlayer : TurnBaseState
         // Exit combat?
         if (DungeonManager.instance.CurrentRoom.Clear)
             SwitchState("Idle");
+
+        // End player turn?
+        if (_ctx.PlayerUsedAction)
+            SwitchState("Enemy");
     }
 }

@@ -71,4 +71,18 @@ public class Room
         for (int i = 0; i < _doors.Count;i++)
             _doors[i].SetLocked(_locked);
     }
+
+    /// <summary>
+    /// Returns a list of EC_Damage (hostile entities) in room
+    /// </summary>
+    public List<EC_Damage> GetHostiles()
+    {
+        List<EC_Damage> _hostiles = new List<EC_Damage>();
+        for (int i = 0; i < roomEntities.Count; i++)
+        {
+            if (roomEntities[i].GetComponent<EC_Damage>())
+                _hostiles.Add(roomEntities[i].GetComponent<EC_Damage>());
+        }
+        return _hostiles;
+    }
 }

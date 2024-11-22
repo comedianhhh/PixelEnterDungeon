@@ -14,6 +14,11 @@ public class EC_Damage : MonoBehaviour
         UpdateCounter();
     }
 
+    public void Attack()
+    {
+        Debug.Log("Attacked");
+    }
+
     void UpdateCounter()
     {
         if (counter == null) return;

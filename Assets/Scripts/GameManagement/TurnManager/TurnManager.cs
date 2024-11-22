@@ -10,6 +10,10 @@ public class TurnManager : Singleton<TurnManager>
     public TurnBaseState CurrentState { get { return _currentState; } set { _currentState = value; } }
     TurnBaseState _currentState;
 
+    // Variables
+    public bool PlayerUsedAction { get { return _playerUsedAction; } set { _playerUsedAction = value; } }
+    bool _playerUsedAction;
+
     protected override void Awake()
     {
         base.Awake();
@@ -36,5 +40,12 @@ public class TurnManager : Singleton<TurnManager>
         states.Add("Idle", new TurnStateIdle(this));
         states.Add("Player", new TurnStatePlayer(this));
         states.Add("Enemy", new TurnStateEnemy(this));
+    }
+
+    public bool StateIs(string id)
+    {
+        if (states[id] == null) return false;
+
+        return _currentState == states[id];
     }
 }

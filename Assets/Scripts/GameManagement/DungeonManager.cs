@@ -20,8 +20,8 @@ public class DungeonManager : Singleton<DungeonManager>
     [SerializeField] List<RoomGroupSO> bossRooms = new List<RoomGroupSO>();
 
     [Header("Stage Generation Settings")]
-    [SerializeField, Range(1, 5)] int maxDepth;
-    [SerializeField, Range(1, 4)] int maxDoors;
+    [SerializeField] int maxDepth = 4;
+    [SerializeField] int maxDoors = 2;
 
     // Generation variables
     List<EC_Door> doorsToFill; // List of doors with no destination yet, generate a room for these doors

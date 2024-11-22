@@ -5046,7 +5046,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &482014789
+--- !u!1 &698135874
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5054,9 +5054,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 482014790}
-  - component: {fileID: 482014793}
-  - component: {fileID: 482014792}
+  - component: {fileID: 698135876}
+  - component: {fileID: 698135877}
+  - component: {fileID: 698135875}
   m_Layer: 0
   m_Name: Room Manager
   m_TagString: Untagged
@@ -5064,28 +5064,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &482014790
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 482014789}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &482014792
+--- !u!114 &698135875
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 482014789}
+  m_GameObject: {fileID: 698135874}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 350c1c1c6fcbfbc4b93b0a7e40df2bb6, type: 3}
@@ -5094,16 +5079,31 @@ MonoBehaviour:
   maxColumns: 4
   spacing: {x: 4.5, y: 4.25}
   offset: {x: 0, y: 0}
---- !u!114 &482014793
+--- !u!4 &698135876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698135874}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &698135877
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 482014789}
+  m_GameObject: {fileID: 698135874}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc90566e32a8fe4986736c3b3e47af8, type: 3}
+  m_Script: {fileID: 11500000, guid: 7986df01aed52934d8a4b0b386726caf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   backDoorPrefab: {fileID: 1773695994068289626, guid: 20d44f7a86a950c4891754cc54761227, type: 3}
@@ -5723,7 +5723,7 @@ SceneRoots:
   - {fileID: 1877925735}
   - {fileID: 1142858466}
   - {fileID: 1673524018}
-  - {fileID: 482014790}
   - {fileID: 70206194}
   - {fileID: 426026484}
   - {fileID: 1646290352}
+  - {fileID: 698135876}
