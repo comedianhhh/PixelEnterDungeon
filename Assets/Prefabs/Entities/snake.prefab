@@ -50,19 +50,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clickEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3603563806113549388}
-        m_TargetAssemblyTypeName: EC_Health, Scripts
-        m_MethodName: Damage
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+  tooltip: {fileID: 0}
 --- !u!61 &758618390429672008
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -122,6 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   counter: {fileID: 6540063541809874978}
+  deathFX: {fileID: 8421794515235006879, guid: 39ae53dd3ea87004bb3abe8e6f87c3b5, type: 3}
 --- !u!114 &1677787411193452743
 MonoBehaviour:
   m_ObjectHideFlags: 0

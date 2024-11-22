@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class EC_Damage : MonoBehaviour
+public class PlayerDamage : MonoBehaviour
 {
     public int damage;
 
@@ -14,9 +12,9 @@ public class EC_Damage : MonoBehaviour
         UpdateCounter();
     }
 
-    public void Attack()
+    public void Damage(EC_Health _target)
     {
-        Player.instance.Health.Damage(damage);
+        _target.Damage(damage);
     }
 
     void UpdateCounter()

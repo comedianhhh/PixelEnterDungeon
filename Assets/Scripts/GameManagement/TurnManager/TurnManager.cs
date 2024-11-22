@@ -10,6 +10,9 @@ public class TurnManager : Singleton<TurnManager>
     public TurnBaseState CurrentState { get { return _currentState; } set { _currentState = value; } }
     TurnBaseState _currentState;
 
+    [Header("Enemy Attacks")]
+    public float timeBetweenAttacks;
+
     // Variables
     public bool PlayerUsedAction { get { return _playerUsedAction; } set { _playerUsedAction = value; } }
     bool _playerUsedAction;

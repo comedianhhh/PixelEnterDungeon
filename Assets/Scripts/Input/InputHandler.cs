@@ -20,21 +20,41 @@ public class InputHandler : MonoBehaviour
     {
         _currentClickable = CurrentClickable();
 
-        if (Mouse.current.leftButton.wasPressedThisFrame)
-        {
-            // Clickable is an entity, check if enemy turn
-            if (_currentClickable is EC_Entity && !TurnManager.instance.StateIs("Enemy"))
-            {
-                _currentClickable?.Click();
-                TurnManager.instance.PlayerUsedAction = true;
-            }
-            // Click clickable
-            else
-                _currentClickable?.Click();
-        }
-
         _tooltip.transform.position = MouseWorldPosition();
         _tooltip.sprite = _currentClickable?.tooltip;
+
+        if (Mouse.current.leftButton.wasPressedThisFrame)
+            HandleClick(_currentClickable);
+    }
+
+    void HandleClick(Clickable _clicked)
+    {
+        // No clickable
+        if (_clicked == null)
+            return;
+
+        // Clickable is not entity, click
+        if (!(_clicked is EC_Entity))
+        {
+            _clicked?.Click();
+            return;
+        }
+
+        // Clickable is health entity, click and use player action
+        if (_clicked.GetComponent<EC_Health>() && !TurnManager.instance.StateIs("Enemy"))
+        {
+            _clicked.Click();
+            Player.instance.Damage.Damage(_clicked.GetComponent<EC_Health>());
+            TurnManager.instance.PlayerUsedAction = true;
+            return;
+        }
+
+        // Clickable is entity but not targetable, click, do not use player action
+        if (_clicked is EC_Entity && !TurnManager.instance.StateIs("Enemy"))
+        {
+            _clicked.Click();
+            return;
+        }
     }
 
     Clickable CurrentClickable()
