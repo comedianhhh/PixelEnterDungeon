@@ -1,12 +1,12 @@
 using UnityEngine;
 
-public class GridLayout : MonoBehaviour
+public class ArrangeGrid : MonoBehaviour
 {
     public int maxColumns = 3;
     public Vector2 spacing = new Vector2(1.0f, 1.0f);
     public Vector2 offset = Vector2.zero;
 
-    public void ArrangeGrid(bool _force = false)
+    public void Arrange(bool _force = false)
     {
         int childCount = transform.childCount;
 

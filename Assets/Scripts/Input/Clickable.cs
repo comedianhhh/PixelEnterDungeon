@@ -8,6 +8,9 @@ public class Clickable : MonoBehaviour
     [Header("Events")]
     public UnityEvent clickEvent;
 
+    [Header("Tooltip")]
+    public Sprite tooltip;
+
     public void Click()
     {
         clickEvent.Invoke();

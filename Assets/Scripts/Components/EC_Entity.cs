@@ -13,9 +13,8 @@ public class EC_Entity : Clickable
     public void Remove()
     {
         room.roomEntities.Remove(this);
-        room.CheckClear();
         IsEnabled(false);
-        DungeonManager.instance.GetComponent<GridLayout>().ArrangeGrid();
+        DungeonManager.instance.GetComponent<ArrangeGrid>().Arrange();
 
         Destroy(gameObject);
     }

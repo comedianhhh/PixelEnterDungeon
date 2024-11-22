@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class DungeonManager : Singleton<DungeonManager>
 {
+    public Room CurrentRoom { get { return currentRoom; } }
     Room currentRoom;
     List<Room> rooms;
 
@@ -15,8 +16,8 @@ public class DungeonManager : Singleton<DungeonManager>
     [SerializeField] EC_Entity bossKeyPrefab;
 
     [Header("Room Prefabs")]
-    [SerializeField] List<RoomGroup> roomDepth = new List<RoomGroup>();
-    [SerializeField] List<RoomGroup> bossRooms = new List<RoomGroup>();
+    [SerializeField] List<RoomGroupSO> roomDepth = new List<RoomGroupSO>();
+    [SerializeField] List<RoomGroupSO> bossRooms = new List<RoomGroupSO>();
 
     [Header("Stage Generation Settings")]
     [SerializeField, Range(1, 5)] int maxDepth;
@@ -26,16 +27,18 @@ public class DungeonManager : Singleton<DungeonManager>
     List<EC_Door> doorsToFill; // List of doors with no destination yet, generate a room for these doors
 
     // Components
-    GridLayout gridLayout;
+    ArrangeGrid gridLayout;
 
-    void Start()
+    protected override void Awake()
     {
+        base.Awake();
+
         // Initialize variables
         rooms = new List<Room>();
         doorsToFill = new List<EC_Door>();
 
         // Assign components
-        gridLayout = GetComponent<GridLayout>();
+        gridLayout = GetComponent<ArrangeGrid>();
 
         GenerateDungeon();
     }
@@ -119,7 +122,7 @@ public class DungeonManager : Singleton<DungeonManager>
         currentRoom.EnterRoom();
 
         // Update grid
-        gridLayout.ArrangeGrid(true);
+        gridLayout.Arrange(true);
     }
 
     /// <summary>
@@ -178,7 +181,7 @@ public class DungeonManager : Singleton<DungeonManager>
     }
 
     /// <summary>
-    /// Returns list of rooms at desired depth excluding list of excluded rooms, if no valid rooms exist
+    /// Returns list of rooms at desired depth excluding list of excluded rooms, if no valid rooms exist search previous depth
     /// </summary>
     List<Room> RoomsAtDepth(int _depth, List<Room> _excluded)
     {
@@ -215,16 +218,5 @@ public class DungeonManager : Singleton<DungeonManager>
         _entity.IsEnabled(false);
         _entity.room = room;
         return _entity;
-    }
-
-    [System.Serializable] class RoomGroup
-    {
-        public List<RoomSO> rooms = new List<RoomSO>();
-
-        public RoomSO RandomRoom()
-        {
-            int rand = Random.Range(0, rooms.Count);
-            return rooms[rand];
-        }
     }
 }
