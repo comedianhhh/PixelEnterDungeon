@@ -3,7 +3,9 @@ using UnityEngine;
 
 public class Counter : MonoBehaviour
 {
-    [SerializeField] List<Sprite> characters = new List<Sprite>();
+    [SerializeField] List<Sprite> smallCharacters = new List<Sprite>();
+    [SerializeField] List<Sprite> largeCharacters = new List<Sprite>();
+    [SerializeField] bool largeText;
     [SerializeField] GameObject numberPrefab;
     [SerializeField] float spacing;
 
@@ -16,21 +18,9 @@ public class Counter : MonoBehaviour
         // Create new numbers
         for (int i = 0; i < text.Length; i++)
         {
-            string str = "numbers_" + color + text[i];
-
-            GameObject number = Instantiate(numberPrefab, transform);
-            number.transform.localPosition = new Vector3(i * spacing, 0, 0);
-            number.GetComponent<SpriteRenderer>().sprite = CharToSprite(str);
+            GameObject _go = Instantiate(numberPrefab, transform);
+            _go.transform.localPosition = new Vector3(largeText ? i * 7f/17f : i * 0.25f, 0, 0);
+            _go.GetComponent<SpriteRenderer>().sprite = largeText ? largeCharacters[color * 10 + text[i] - 48] : smallCharacters[color * 10 + text[i] - 48];
         }
-    }
-
-    private Sprite CharToSprite(string str)
-    {
-        for (int i = 0; i < characters.Count; i++)
-        {
-            if (characters[i].name == str)
-                return characters[i];
-        }
-        return null;
     }
 }
