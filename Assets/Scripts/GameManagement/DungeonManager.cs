@@ -40,7 +40,10 @@ public class DungeonManager : Singleton<DungeonManager>
 
         // Assign components
         gridLayout = GetComponent<ArrangeGrid>();
+    }
 
+    void Start()
+    {
         GenerateDungeon();
     }
 
@@ -52,8 +55,6 @@ public class DungeonManager : Singleton<DungeonManager>
         GenerateLayer(1);
         // Generate boss room
         GenerateBossRoom(0);
-        // Display map
-        mapRenderer.DisplayMap(rooms);
 
         // Enter first room
         SwitchRoom(rooms[0]);
@@ -79,7 +80,9 @@ public class DungeonManager : Singleton<DungeonManager>
         // Spawn boss door
         EC_Entity _bossDoor = SpawnEntity(bossDoorPrefab, _bossDoorRoom);
         // Create boss room
-        _bossDoor.GetComponent<EC_Door>().destination = CreateBossRoom(_stage ,_depth + 1, _bossDoorRoom);
+        Room _bossRoom = CreateBossRoom(_stage, _depth + 1, _bossDoorRoom);
+        _bossRoom.parentRoom.children.Add(_bossRoom);
+        _bossDoor.GetComponent<EC_Door>().destination = _bossRoom;
 
         // Randomly determine boss key room
         List<Room> _keyRooms = RoomsAtDepth(_depth, new List<Room>() { _bossDoorRoom, _bossDoorRoom.parentRoom });
@@ -133,6 +136,9 @@ public class DungeonManager : Singleton<DungeonManager>
 
         // Update grid
         gridLayout.Arrange(true);
+
+        // Display
+        mapRenderer.DisplayMap(rooms, currentRoom);
     }
 
     /// <summary>
