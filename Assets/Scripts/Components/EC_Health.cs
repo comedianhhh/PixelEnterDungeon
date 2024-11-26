@@ -1,9 +1,15 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EC_Health : MonoBehaviour
 {
     public int maxHealth;
     int currentHealth;
+
+
+    [Header("Events")]
+    public UnityEvent deathEvent;
+    public UnityEvent damageEvent;
 
     // Components
     EC_Animator anim;
@@ -22,6 +28,7 @@ public class EC_Health : MonoBehaviour
 
     public void Damage(int value)
     {
+        damageEvent.Invoke();
         currentHealth -= value;
         if (currentHealth <= 0)
         {
@@ -50,6 +57,8 @@ public class EC_Health : MonoBehaviour
 
     public void Kill()
     {
+        deathEvent.Invoke();
+
         if (deathFX != null)
         {
             GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity);

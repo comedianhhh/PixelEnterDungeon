@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class Room
 {
-    public Room(int depth, Room parentRoom)
+    public Room(int depth, Room parentRoom, bool bossRoom = false)
     {
         roomEntities = new List<EC_Entity>();
         this.depth = depth;
         this.parentRoom = parentRoom;
+        children = new List<Room>();
+        type = bossRoom ? RoomType.boss : RoomType.normal;
     }
 
     public List<EC_Entity> roomEntities;
     public Room parentRoom;
+    public List<Room> children;
+    public RoomType type;
     
     // Variables
     public int depth;
@@ -31,6 +35,12 @@ public class Room
         }
 
         return true;
+    }
+
+    public enum RoomType
+    {
+        normal,
+        boss
     }
 
     /// <summary>

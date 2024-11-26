@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 758618390429672008}
   - component: {fileID: 3603563806113549388}
   - component: {fileID: 1677787411193452743}
+  - component: {fileID: 4606210757823977908}
   m_Layer: 0
   m_Name: snake
   m_TagString: Untagged
@@ -52,6 +53,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   tooltip: {fileID: 0}
+  removeEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4606210757823977908}
+        m_TargetAssemblyTypeName: EC_CoinDropper, Scripts
+        m_MethodName: DropCoins
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!61 &758618390429672008
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -110,6 +126,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
+  deathEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  damageEvent:
+    m_PersistentCalls:
+      m_Calls: []
   counter: {fileID: 6540063541809874978}
   deathFX: {fileID: 8421794515235006879, guid: 39ae53dd3ea87004bb3abe8e6f87c3b5, type: 3}
 --- !u!114 &1677787411193452743
@@ -126,6 +148,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 2
   counter: {fileID: 8395779358675097679}
+--- !u!114 &4606210757823977908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5931461512106533215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78531e1e29a86814da1a1e7df81c26ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amount: 3
+  rand: 1
+  coinPrefab: {fileID: 3946428023895682049, guid: 6d869c8f8e1e23d4b93f5c087a2fe142, type: 3}
 --- !u!1 &7229823095076977633
 GameObject:
   m_ObjectHideFlags: 0
