@@ -15,9 +15,6 @@ public class EC_Health : MonoBehaviour
     EC_Animator anim;
     [SerializeField] Counter counter;
 
-    [Header("FX")]
-    public GameObject deathFX;
-
     void Start()
     {
         anim = GetComponentInChildren<EC_Animator>();
@@ -29,6 +26,7 @@ public class EC_Health : MonoBehaviour
     public void Damage(int value)
     {
         damageEvent.Invoke();
+        ArtifactManager.instance.TriggerDealDamage();
         currentHealth -= value;
         if (currentHealth <= 0)
         {
@@ -58,12 +56,6 @@ public class EC_Health : MonoBehaviour
     public void Kill()
     {
         deathEvent.Invoke();
-
-        if (deathFX != null)
-        {
-            GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity);
-            Destroy(fx, 2);
-        }
 
         GetComponent<EC_Entity>().Remove();
     }

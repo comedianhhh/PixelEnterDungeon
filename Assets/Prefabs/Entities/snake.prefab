@@ -52,7 +52,7 @@ MonoBehaviour:
   clickEvent:
     m_PersistentCalls:
       m_Calls: []
-  tooltip: {fileID: 0}
+  tooltip: {fileID: 202028298, guid: 0f648f3c1beb86748984826c3817c64a, type: 3}
   removeEvent:
     m_PersistentCalls:
       m_Calls:
@@ -68,6 +68,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  deathFX: {fileID: 8421794515235006879, guid: 39ae53dd3ea87004bb3abe8e6f87c3b5, type: 3}
 --- !u!61 &758618390429672008
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -128,12 +129,23 @@ MonoBehaviour:
   maxHealth: 3
   deathEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: EC_Spawner, Scripts
+        m_MethodName: Spawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   damageEvent:
     m_PersistentCalls:
       m_Calls: []
   counter: {fileID: 6540063541809874978}
-  deathFX: {fileID: 8421794515235006879, guid: 39ae53dd3ea87004bb3abe8e6f87c3b5, type: 3}
 --- !u!114 &1677787411193452743
 MonoBehaviour:
   m_ObjectHideFlags: 0

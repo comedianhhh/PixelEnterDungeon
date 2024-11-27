@@ -50,7 +50,7 @@ public class Room
     {
         for (int i = 0; i < roomEntities.Count; i++)
         {
-            roomEntities[i].IsEnabled(true, DungeonManager.instance.transform);
+            roomEntities[i].IsEnabled(true);
         }
     }
 

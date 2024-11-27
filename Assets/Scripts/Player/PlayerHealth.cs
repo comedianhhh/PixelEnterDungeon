@@ -19,6 +19,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void Damage(int value)
     {
+        ArtifactManager.instance.TriggerTakeDamage();
         currentHealth -= value;
         if (currentHealth <= 0)
         {

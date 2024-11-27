@@ -49,6 +49,11 @@ MonoBehaviour:
   clickEvent:
     m_PersistentCalls:
       m_Calls: []
+  tooltip: {fileID: 0}
+  removeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  deathFX: {fileID: 8421794515235006879, guid: 39ae53dd3ea87004bb3abe8e6f87c3b5, type: 3}
 --- !u!61 &758618390429672008
 BoxCollider2D:
   m_ObjectHideFlags: 0

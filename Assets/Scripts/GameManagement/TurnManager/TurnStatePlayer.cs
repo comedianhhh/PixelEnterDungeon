@@ -9,11 +9,12 @@ public class TurnStatePlayer : TurnBaseState
     public override void EnterState()
     {
         _ctx.PlayerUsedAction = false;
+        ArtifactManager.instance.TriggerStartOfTurn();
     }
 
     public override void ExitState()
     {
-
+        ArtifactManager.instance.TriggerEndOfTurn();
     }
 
     public override void UpdateState()

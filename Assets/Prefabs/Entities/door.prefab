@@ -163,6 +163,10 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   tooltip: {fileID: 1752919404, guid: 0facf01f9c4ec4449b56045cf6e4adae, type: 3}
+  removeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  deathFX: {fileID: 8421794515235006879, guid: 39ae53dd3ea87004bb3abe8e6f87c3b5, type: 3}
 --- !u!114 &6163271537643887638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,9 +179,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19eedfb5bd479548b72e842a7f90eae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  requiresKey: 0
   iconSR: {fileID: 8842538551776618723}
   openSprite: {fileID: 483517832, guid: 0facf01f9c4ec4449b56045cf6e4adae, type: 3}
   lockedSprite: {fileID: -1497773947, guid: 0facf01f9c4ec4449b56045cf6e4adae, type: 3}
+  openTooltip: {fileID: -1237122923, guid: 0f648f3c1beb86748984826c3817c64a, type: 3}
+  lockedTooltip: {fileID: -716023397, guid: 0f648f3c1beb86748984826c3817c64a, type: 3}
 --- !u!61 &758618390429672008
 BoxCollider2D:
   m_ObjectHideFlags: 0

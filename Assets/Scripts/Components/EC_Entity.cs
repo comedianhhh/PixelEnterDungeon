@@ -7,15 +7,24 @@ public class EC_Entity : Clickable
 
     public UnityEvent removeEvent;
 
-    public void IsEnabled(bool enabled, Transform parent = null)
+    [Header("FX")]
+    public GameObject deathFX;
+
+    public void IsEnabled(bool enabled)
     {
-        transform.parent = parent;
+        transform.parent = enabled ? DungeonManager.instance.transform : null;
         gameObject.SetActive(enabled);
     }
 
     public void Remove()
     {
         removeEvent.Invoke();
+
+        if (deathFX != null)
+        {
+            GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity);
+            Destroy(fx, 2);
+        }
 
         room.roomEntities.Remove(this);
         IsEnabled(false);

@@ -44,17 +44,17 @@ public class DungeonManager : Singleton<DungeonManager>
 
     void Start()
     {
-        GenerateDungeon();
+        GenerateDungeon(0);
     }
 
-    public void GenerateDungeon()
+    public void GenerateDungeon(int stage)
     {
         // Generate first room
         CreateRoom(0, null);
         // Iteratively generate layers
         GenerateLayer(1);
         // Generate boss room
-        GenerateBossRoom(0);
+        GenerateBossRoom(stage);
 
         // Enter first room
         SwitchRoom(rooms[0]);
@@ -79,6 +79,7 @@ public class DungeonManager : Singleton<DungeonManager>
         Room _bossDoorRoom = _bossDoorRooms[Random.Range(0, _bossDoorRooms.Count)];
         // Spawn boss door
         EC_Entity _bossDoor = SpawnEntity(bossDoorPrefab, _bossDoorRoom);
+        _bossDoor.GetComponent<EC_Door>().SetLocked(true);
         // Create boss room
         Room _bossRoom = CreateBossRoom(_stage, _depth + 1, _bossDoorRoom);
         _bossRoom.parentRoom.children.Add(_bossRoom);
@@ -87,7 +88,8 @@ public class DungeonManager : Singleton<DungeonManager>
         // Randomly determine boss key room
         List<Room> _keyRooms = RoomsAtDepth(_depth, new List<Room>() { _bossDoorRoom, _bossDoorRoom.parentRoom });
         Room _keyRoom = _keyRooms[Random.Range(0, _keyRooms.Count)];
-        SpawnEntity(bossKeyPrefab, _keyRoom);
+        EC_Entity _bossKey = SpawnEntity(bossKeyPrefab, _keyRoom);
+        _bossKey.GetComponent<EC_StageKey>().keyDoor = _bossDoor.GetComponent<EC_Door>();
     }
 
     /// <summary>
@@ -133,6 +135,9 @@ public class DungeonManager : Singleton<DungeonManager>
         // Enter next room
         currentRoom = nextRoom;
         currentRoom.EnterRoom();
+        ArtifactManager.instance.TriggerEnterRoom();
+        if (currentRoom.type == Room.RoomType.boss)
+            ArtifactManager.instance.TriggerEnterBossRoom();
 
         // Update grid
         gridLayout.Arrange(true);
@@ -225,7 +230,7 @@ public class DungeonManager : Singleton<DungeonManager>
     /// <summary>
     /// Spawns entity gameobject to scene given EC_Entity type prefab and room to spawn into, returns new created entity
     /// </summary>
-    EC_Entity SpawnEntity(EC_Entity entityToSpawn, Room room)
+    public EC_Entity SpawnEntity(EC_Entity entityToSpawn, Room room)
     {
         EC_Entity _entity = Instantiate(entityToSpawn.gameObject).GetComponent<EC_Entity>();
         room.roomEntities.Add(_entity);

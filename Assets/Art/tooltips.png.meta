@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 40cb36689b3a7b54f87964fcab273c49
+guid: 0f648f3c1beb86748984826c3817c64a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,85 +123,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: doors_0
+      name: tooltips_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
+        y: 233
+        width: 109
+        height: 23
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 373c02f7e6586aa48b19251e73da94d5
-      internalID: 1041566350
+      spriteID: f131e4c97115dd64c84207c52588a276
+      internalID: 202028298
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doors_1
+      name: tooltips_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
+        x: 110
+        y: 233
+        width: 103
+        height: 23
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ee70bbf431749743a96c4b29dd37ddb
-      internalID: -1084666569
+      spriteID: 5d7267e9f16fd064abfb4011945ec7e1
+      internalID: -1237122923
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doors_2
+      name: tooltips_2
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
+        x: 0
+        y: 201
+        width: 106
+        height: 31
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25558abee2b1d1a458c0548f25afd8b9
-      internalID: -1518146257
+      spriteID: 104b610381c9bfc45a30be56fb34af71
+      internalID: -716023397
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: doors_3
+      name: tooltips_3
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
+        x: 107
+        y: 201
+        width: 73
+        height: 31
+      alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 564b74ad782a4d0439d29d2953745f4a
-      internalID: 844087788
+      spriteID: 551a3dfe0cab9f548a1457e6f343eba1
+      internalID: -929136434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tooltips_4
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 201
+        width: 62
+        height: 31
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fa4c1aaf0e5ba5499844fdc7051aea3
+      internalID: -1014540461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tooltips_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 177
+        width: 103
+        height: 23
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdc1f02eec51ed140a229908c165d572
+      internalID: -1514224103
       vertices: []
       indices: 
       edges: []
@@ -217,10 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      doors_0: 1041566350
-      doors_1: -1084666569
-      doors_2: -1518146257
-      doors_3: 844087788
+      tooltips_0: 202028298
+      tooltips_1: -1237122923
+      tooltips_2: -716023397
+      tooltips_3: -929136434
+      tooltips_4: -1014540461
+      tooltips_5: -1514224103
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

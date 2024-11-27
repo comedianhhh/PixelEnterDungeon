@@ -6,28 +6,65 @@ public class EC_Door : MonoBehaviour
 {
     [HideInInspector] public Room destination;
 
+    [SerializeField] bool requiresKey;
+    bool keyFound;
+
     [Header("Icons")]
     [SerializeField] SpriteRenderer iconSR;
     [SerializeField] Sprite openSprite;
     [SerializeField] Sprite lockedSprite;
+    [SerializeField] Sprite openTooltip;
+    [SerializeField] Sprite lockedTooltip;
 
     // Variables
     bool locked;
 
-    public void SetLocked(bool _locked)
+    // Components
+    EC_Entity entity;
+
+    void Awake()
     {
-        if (locked && !_locked)
+        entity = GetComponent<EC_Entity>();
+        keyFound = false;
+    }
+
+    public virtual void SetLocked(bool _locked, bool key = false)
+    {
+        if (requiresKey && key)
+            keyFound = true;
+
+        if (_locked)
         {
-            // unlocked FX
-        }
-        if (!locked && _locked)
-        {
-            // locked FX
+            Lock();
+            return;
         }
 
-        locked = _locked;
+        if (requiresKey && keyFound)
+        {
+            Unlock();
+        }
+        else if (!requiresKey)
+        {
+            Unlock();
+        }
+        else
+        {
+            Lock();
+        }
+    }
 
-        iconSR.sprite = locked ? lockedSprite : openSprite;
+    void Unlock()
+    {
+        locked = false;
+        iconSR.sprite = openSprite;
+        entity.tooltip = openTooltip;
+    }
+
+    void Lock()
+    {
+        locked = true;
+        iconSR.sprite = lockedSprite;
+        entity.tooltip = lockedTooltip;
     }
 
     public void EnterRoom()
