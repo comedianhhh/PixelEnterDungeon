@@ -1,6 +1,7 @@
 using benjohnson;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class DungeonManager : Singleton<DungeonManager>
@@ -45,7 +46,7 @@ public class DungeonManager : Singleton<DungeonManager>
 
     void Start()
     {
-        GenerateDungeon(0);
+        GenerateDungeon(GameManager.instance.stage);
     }
 
     public void GenerateDungeon(int stage)
@@ -59,6 +60,8 @@ public class DungeonManager : Singleton<DungeonManager>
 
         // Enter first room
         SwitchRoom(rooms[0]);
+
+        GameManager.instance.DungeonLoaded();
     }
 
     /// <summary>

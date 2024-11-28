@@ -5,6 +5,6 @@ public class EC_EndStage : MonoBehaviour
 {
     public void NextStage()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+        DungeonManager.instance.GenerateDungeon(0);
     }
 }

@@ -6,7 +6,10 @@ public abstract class A_Base : ScriptableObject
 {
     public string a_name;
     public Sprite sprite;
-    [TextArea] public string description;
+    public Sprite tooltip;
+
+    // Variables
+    [HideInInspector] public bool triggered = false;
 
     public virtual void OnStartOfTurn() { }
     public virtual void OnEndOfTurn() { }

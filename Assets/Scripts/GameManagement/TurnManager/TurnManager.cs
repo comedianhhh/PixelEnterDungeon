@@ -22,11 +22,11 @@ public class TurnManager : Singleton<TurnManager>
         base.Awake();
 
         InitializeStates();
-        _currentState = states["Idle"];
     }
 
-    void Start()
+    public void StartTurnManager()
     {
+        _currentState = states["Idle"];
         _currentState.EnterState();
     }
 
