@@ -16,10 +16,6 @@ namespace benjohnson
             // Load first scene in build index
             UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive);
             currentSceneIndex = 1;
-
-            // Lock and hide cursor
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
         }
 
         List<AsyncOperation> scenesLoading = new List<AsyncOperation>();

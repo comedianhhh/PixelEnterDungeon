@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class A_Base : MonoBehaviour
+public abstract class A_Base : ScriptableObject
 {
     public string a_name;
     public Sprite sprite;

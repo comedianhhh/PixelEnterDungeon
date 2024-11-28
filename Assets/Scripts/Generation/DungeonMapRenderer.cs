@@ -39,15 +39,15 @@ public class DungeonMapRenderer : MonoBehaviour
         "xxoooxx",
         "xxxxxxx"
     };
-    string[] bigcircle = new string[]
+    string[] square = new string[]
 {
-        "xxoooxx",
+        "xxxxxxx",
+        "xooooox",
         "xoxxxox",
-        "oxxxxxo",
-        "oxxxxxo",
-        "oxxxxxo",
         "xoxxxox",
-        "xxoooxx"
+        "xoxxxox",
+        "xooooox",
+        "xxxxxxx"
 };
     string[] skull = new string[]
     {
@@ -126,7 +126,7 @@ public class DungeonMapRenderer : MonoBehaviour
 
                 // Draw room
                 DrawIcon(room.position,
-                         room.currentRoom ? bigcircle : room.bossRoom ? skull : room.cleared ? xmark : circle,
+                         room.currentRoom ? square : room.bossRoom ? skull : room.cleared ? xmark : circle,
                          bgColor,
                          room.currentRoom ? currentColor : room.bossRoom ? bossColor : room.cleared ? clearedColor : roomColor);
             }

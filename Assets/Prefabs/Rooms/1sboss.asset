@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17891f1d7ee29744c8f985ecede9afca, type: 3}
-  m_Name: s1boss
+  m_Script: {fileID: 11500000, guid: 81822b26c2c2894459a7466811c9d50f, type: 3}
+  m_Name: 1sboss
   m_EditorClassIdentifier: 
-  rooms:
-  - {fileID: 11400000, guid: 41eeed8a025cb0e43818a2091053e02d, type: 2}
+  entities:
+  - {fileID: 1306959757903418363, guid: 5f5bd4dae998d2c4ab4ad287547da77d, type: 3}

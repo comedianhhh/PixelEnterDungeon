@@ -248,6 +248,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: tooltips_6
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 177
+        width: 96
+        height: 23
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45c9600be9df6d44cb78d2ac37234688
+      internalID: -1737313883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -265,6 +286,7 @@ TextureImporter:
       tooltips_3: -929136434
       tooltips_4: -1014540461
       tooltips_5: -1514224103
+      tooltips_6: -1737313883
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

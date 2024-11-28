@@ -33,11 +33,18 @@ public class TurnStateEnemy : TurnBaseState
 
         // Exit combat?
         if (DungeonManager.instance.CurrentRoom.Clear)
+        {
+            ArtifactManager.instance.TriggerClearRoom();
             SwitchState("Idle");
+            return;
+        }
 
         // Player turn?
         if (_hostiles.Count <= 0)
+        {
             SwitchState("Player");
+            return;
+        }
 
         // Timers
         _timeSinceAttack += Time.deltaTime;

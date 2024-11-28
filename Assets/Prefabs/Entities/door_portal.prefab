@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 168197279660354423}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.4375, z: 0}
+  m_LocalPosition: {x: 0, y: -0.1875, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 483517832, guid: 0facf01f9c4ec4449b56045cf6e4adae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &3205862195654131738
@@ -109,10 +109,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8688484898415124132}
   - component: {fileID: 1306959757903418363}
-  - component: {fileID: 6163271537643887638}
+  - component: {fileID: -7463322893366858763}
   - component: {fileID: 758618390429672008}
   m_Layer: 0
-  m_Name: door
+  m_Name: door_portal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,9 +150,9 @@ MonoBehaviour:
   clickEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6163271537643887638}
-        m_TargetAssemblyTypeName: EC_Door, Scripts
-        m_MethodName: EnterRoom
+      - m_Target: {fileID: -7463322893366858763}
+        m_TargetAssemblyTypeName: EC_EndStage, Scripts
+        m_MethodName: NextStage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -162,12 +162,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  tooltip: {fileID: 1752919404, guid: 0facf01f9c4ec4449b56045cf6e4adae, type: 3}
+  tooltip: {fileID: -1514224103, guid: 0f648f3c1beb86748984826c3817c64a, type: 3}
   removeEvent:
     m_PersistentCalls:
       m_Calls: []
   deathFX: {fileID: 8421794515235006879, guid: 39ae53dd3ea87004bb3abe8e6f87c3b5, type: 3}
---- !u!114 &6163271537643887638
+--- !u!114 &-7463322893366858763
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,15 +176,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5931461512106533215}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f19eedfb5bd479548b72e842a7f90eae, type: 3}
+  m_Script: {fileID: 11500000, guid: e01e77475bf51a14582d2a915377d4a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiresKey: 0
-  iconSR: {fileID: 8842538551776618723}
-  openSprite: {fileID: 483517832, guid: 0facf01f9c4ec4449b56045cf6e4adae, type: 3}
-  lockedSprite: {fileID: -1497773947, guid: 0facf01f9c4ec4449b56045cf6e4adae, type: 3}
-  openTooltip: {fileID: -1237122923, guid: 0f648f3c1beb86748984826c3817c64a, type: 3}
-  lockedTooltip: {fileID: -716023397, guid: 0f648f3c1beb86748984826c3817c64a, type: 3}
 --- !u!61 &758618390429672008
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -304,7 +298,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: -1084666569, guid: 40cb36689b3a7b54f87964fcab273c49, type: 3}
+  m_Sprite: {fileID: 844087788, guid: 40cb36689b3a7b54f87964fcab273c49, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

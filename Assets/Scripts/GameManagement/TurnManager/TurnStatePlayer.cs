@@ -21,10 +21,17 @@ public class TurnStatePlayer : TurnBaseState
     {
         // Exit combat?
         if (DungeonManager.instance.CurrentRoom.Clear)
+        {
+            ArtifactManager.instance.TriggerClearRoom();
             SwitchState("Idle");
+            return;
+        }
 
         // End player turn?
         if (_ctx.PlayerUsedAction)
+        {
             SwitchState("Enemy");
+            return;
+        }
     }
 }

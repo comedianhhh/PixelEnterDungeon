@@ -20,8 +20,9 @@ public class DungeonManager : Singleton<DungeonManager>
     [SerializeField] List<RoomGroupSO> bossRooms = new List<RoomGroupSO>();
 
     [Header("Stage Generation Settings")]
-    [SerializeField] int maxDepth = 4;
+    [SerializeField] int maxDepth = 3;
     [SerializeField] int maxDoors = 2;
+    [SerializeField, Range(0.1f, 3f)] float oddsPower = 1;
 
     // Generation variables
     List<EC_Door> doorsToFill; // List of doors with no destination yet, generate a room for these doors
@@ -163,7 +164,7 @@ public class DungeonManager : Singleton<DungeonManager>
         // Spawn doors according to depth
         for (int i = 0; i < maxDoors; i++)
         {
-            if (Random.Range(0.0f, 1.0f) <= 1 - ((float)_depth / (float)maxDepth))
+            if (Random.Range(0.0f, 1.0f) <= 1 - Mathf.Pow((float)_depth / (float)maxDepth, oddsPower))
             {
                 EC_Entity _door = SpawnEntity(doorPrefab, _room);
                 doorsToFill.Add(_door.GetComponent<EC_Door>());
