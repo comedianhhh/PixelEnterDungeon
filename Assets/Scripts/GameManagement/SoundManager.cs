@@ -12,6 +12,12 @@ namespace benjohnson
         [SerializeField] List<AudioProfile> clips;
         [SerializeField] List<AudioProfile> music;
 
+        private void Update()
+        {
+            if (!musicSource.isPlaying)
+                PlayMusic(0);
+        }
+
         public void PlaySound(string id)
         {
             for (int i = 0; i < clips.Count; i++)
@@ -28,12 +34,12 @@ namespace benjohnson
 
         public void PlayMusic(int i)
         {
-            musicSource.PlayOneShot(clips[i].Clip(), clips[i].volume);
+            musicSource.PlayOneShot(music[i].Clip(), clips[i].volume);
         }
     }
 
     [System.Serializable]
-    public struct AudioProfile
+    public class AudioProfile
     {
         public string name;
         public AudioClip[] clips;
@@ -41,6 +47,6 @@ namespace benjohnson
         {
             return clips[Random.Range(0, clips.Length)];
         }
-        [Range(0, 1)] public float volume;
+        [Range(0, 1)] public float volume = 0.5f;
     }
 }

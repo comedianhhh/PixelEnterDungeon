@@ -271,10 +271,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1374d741a60a95a439a4c8a1c3cafe8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectsSource: {fileID: 0}
-  musicSource: {fileID: 0}
-  clips: []
-  music: []
+  effectsSource: {fileID: 1038574581}
+  musicSource: {fileID: 1038574582}
+  clips:
+  - name: Enemy Hurt
+    clips:
+    - {fileID: 8300000, guid: 6830f97ef227e6546a5b3f4f7d6119da, type: 3}
+    - {fileID: 8300000, guid: e7caa2d57037f1942a97d0191a08dd6f, type: 3}
+    - {fileID: 8300000, guid: 280c7daf5dfed7a4d99b5c4ac207ee05, type: 3}
+    - {fileID: 8300000, guid: 165ad06182c770e458aeb27fd977b6c5, type: 3}
+    - {fileID: 8300000, guid: 56a664bbd71561540bbf21c0e119d33e, type: 3}
+    volume: 0.5
+  - name: Pick Up
+    clips:
+    - {fileID: 8300000, guid: daed9728f7679674da9c2df3aea71605, type: 3}
+    - {fileID: 8300000, guid: 319a89521da2a8143b05d7dadcabcd6b, type: 3}
+    - {fileID: 8300000, guid: 38b1b00a453c57f4eb90c47604147bc5, type: 3}
+    - {fileID: 8300000, guid: d86d79632517a5e45ac5741633dd9aac, type: 3}
+    volume: 0.5
+  - name: Click
+    clips:
+    - {fileID: 8300000, guid: 51dcea142cee8664ba4814b90d123b9e, type: 3}
+    volume: 0.5
+  - name: Player Hurt
+    clips:
+    - {fileID: 8300000, guid: ac021dcc97a67ff49b606cef1ef2dfdb, type: 3}
+    - {fileID: 8300000, guid: ab6f8d73e7b550c4e9d825579345aaea, type: 3}
+    - {fileID: 8300000, guid: 750da7b946d0bca44b566cbf0c04d2f7, type: 3}
+    - {fileID: 8300000, guid: 78fb49ab3c7c833489122e42164f415e, type: 3}
+    - {fileID: 8300000, guid: 259664fd687251d48bee0663affdab7c, type: 3}
+    volume: 0.7
+  - name: Artifact Trigger
+    clips:
+    - {fileID: 8300000, guid: fcf61f1a2535bef49aa6565ba7bcc1e4, type: 3}
+    - {fileID: 8300000, guid: d6ff859b2eccbf848bf8510c3a9132d3, type: 3}
+    - {fileID: 8300000, guid: bdf995a12a2661e4d8f795315fc9917a, type: 3}
+    - {fileID: 8300000, guid: 822c108ba4c3b0a45a89799866b71ae6, type: 3}
+    - {fileID: 8300000, guid: 7e334d5c25f4cd04d83d003d2c94f1c0, type: 3}
+    volume: 0.5
+  music:
+  - name: Music
+    clips:
+    - {fileID: 8300000, guid: 275bce07154b69b428960a42fbb9876a, type: 3}
+    - {fileID: 8300000, guid: 4a733608e589efe49bb9e3c4d46628e1, type: 3}
+    - {fileID: 8300000, guid: 6b078d21ab2bd36459b69e00d82fc7dc, type: 3}
+    volume: 0.5
 --- !u!4 &1038574580
 Transform:
   m_ObjectHideFlags: 0

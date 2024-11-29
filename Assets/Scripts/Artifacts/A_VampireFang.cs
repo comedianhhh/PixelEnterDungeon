@@ -1,3 +1,4 @@
+using benjohnson;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Artifacts/Vampire Fang")]

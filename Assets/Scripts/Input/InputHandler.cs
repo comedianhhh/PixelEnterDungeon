@@ -1,3 +1,4 @@
+using benjohnson;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -32,6 +33,8 @@ public class InputHandler : MonoBehaviour
         // No clickable
         if (_clicked == null)
             return;
+
+        SoundManager.instance.PlaySound("Click");
 
         // Clickable is not entity, click
         if (!(_clicked is EC_Entity))

@@ -1,3 +1,4 @@
+using benjohnson;
 using UnityEngine;
 
 public class Coin : MonoBehaviour
@@ -20,6 +21,7 @@ public class Coin : MonoBehaviour
         {
             // Pick up
             Player.instance.Wallet.AddMoney(1);
+            SoundManager.instance.PlaySound("Pick Up");
             Destroy(gameObject);
         }
     }

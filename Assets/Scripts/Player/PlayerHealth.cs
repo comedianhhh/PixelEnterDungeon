@@ -1,3 +1,4 @@
+using benjohnson;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,6 +23,7 @@ public class PlayerHealth : MonoBehaviour
     public void Damage(int value)
     {
         ArtifactManager.instance.TriggerTakeDamage();
+        SoundManager.instance.PlaySound("Player Hurt");
         currentHealth -= value;
         if (currentHealth <= 0)
         {

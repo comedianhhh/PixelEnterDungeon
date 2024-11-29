@@ -1,3 +1,4 @@
+using benjohnson;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -26,6 +27,7 @@ public class EC_Health : MonoBehaviour
     public void Damage(int value)
     {
         damageEvent.Invoke();
+        SoundManager.instance.PlaySound("Enemy Hurt");
         ArtifactManager.instance.TriggerDealDamage();
         currentHealth -= value;
         if (currentHealth <= 0)
