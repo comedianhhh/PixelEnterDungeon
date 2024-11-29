@@ -36,6 +36,12 @@ public class Room
                 return false;
         }
 
+        // Spawn portal?
+        if (type == RoomType.boss)
+        {
+            DungeonManager.instance.SpawnPortal();
+        }
+
         return true;
     }
 

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 81822b26c2c2894459a7466811c9d50f, type: 3}
-  m_Name: 1s
+  m_Name: (1)grizzly lv1
   m_EditorClassIdentifier: 
   entities:
-  - {fileID: 1306959757903418363, guid: f04685a0609fdab44be7d9b1c64b6368, type: 3}
+  - {fileID: 5931461512106533215, guid: 126f70cd245edd947b559d964aaa146a, type: 3}

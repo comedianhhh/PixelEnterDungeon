@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04b435fca089cf7498ef1dcb792b5731, type: 3}
   m_Name: Strange Mushroom
   m_EditorClassIdentifier: 
-  a_name: Strange Mushroom
   sprite: {fileID: 1072975331, guid: 5f96ac13ecbb87b4ea25cd6068b0b28e, type: 3}
-  description: Gain 4 health after clearing a room
-  healAmount: 4
+  tooltip: {fileID: 0}
+  triggered: 0
+  healAmount: 6

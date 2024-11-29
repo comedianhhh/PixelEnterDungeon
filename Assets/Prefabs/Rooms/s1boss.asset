@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17891f1d7ee29744c8f985ecede9afca, type: 3}
-  m_Name: s1boss
+  m_Name: S1Boss
   m_EditorClassIdentifier: 
   rooms:
-  - {fileID: 11400000, guid: 41eeed8a025cb0e43818a2091053e02d, type: 2}
+  - {fileID: 11400000, guid: 21bc9c40c324c7d41a81edc33a422ad9, type: 2}

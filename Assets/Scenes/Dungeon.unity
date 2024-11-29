@@ -180,22 +180,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 698135874}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7986df01aed52934d8a4b0b386726caf, type: 3}
+  m_Script: {fileID: 11500000, guid: 6dc90566e32a8fe4986736c3b3e47af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backDoorPrefab: {fileID: 1773695994068289626, guid: 20d44f7a86a950c4891754cc54761227, type: 3}
-  doorPrefab: {fileID: 1306959757903418363, guid: 93f46569de4113b43b1cc98309bcd6fa, type: 3}
-  bossDoorPrefab: {fileID: 1679900098687151132, guid: 3d453848671488d48b6166b527997a4d, type: 3}
-  bossKeyPrefab: {fileID: 1306959757903418363, guid: fe4a36c44cc21214a81d927dc4bd56f7, type: 3}
+  backDoorPrefab: {fileID: 5931461512106533215, guid: 20d44f7a86a950c4891754cc54761227, type: 3}
+  doorPrefab: {fileID: 5931461512106533215, guid: 93f46569de4113b43b1cc98309bcd6fa, type: 3}
+  bossDoorPrefab: {fileID: 5931461512106533215, guid: 3d453848671488d48b6166b527997a4d, type: 3}
+  bossKeyPrefab: {fileID: 5931461512106533215, guid: fe4a36c44cc21214a81d927dc4bd56f7, type: 3}
+  portalPrefab: {fileID: 5931461512106533215, guid: f7ff0596b3c7b364f94757e9b108a839, type: 3}
   roomDepth:
-  - {fileID: 11400000, guid: d4edcf0b40aad094aa755cdd5ae7bda2, type: 2}
-  - {fileID: 11400000, guid: d89b89c453cddf9408df0acba4fba6fa, type: 2}
-  - {fileID: 11400000, guid: 9301bcaa3cebbba4ba7988749e444850, type: 2}
+  - {fileID: 11400000, guid: cbcf77e3109f2fd4c99c183c82a8ea3b, type: 2}
+  - {fileID: 11400000, guid: cbcf77e3109f2fd4c99c183c82a8ea3b, type: 2}
+  - {fileID: 11400000, guid: cbcf77e3109f2fd4c99c183c82a8ea3b, type: 2}
   bossRooms:
   - {fileID: 11400000, guid: b546e56e2a2bdc147bd824c937a7c440, type: 2}
   maxDepth: 3
   maxDoors: 2
-  oddsPower: 1.33
+  oddsPower: 1.35
   mapRenderer: {fileID: 1960039411}
 --- !u!1 &1960039408
 GameObject:

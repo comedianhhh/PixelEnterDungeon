@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EC_Spawner : MonoBehaviour
 {
-    public EC_Entity entity;
+    public GameObject entity;
 
     public void Spawn()
     {
