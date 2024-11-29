@@ -9,12 +9,14 @@ public class PlayerHealth : MonoBehaviour
     int currentHealth;
 
     // Components
-    [SerializeField] Counter counter;
+    [SerializeField] Counter cCounter;
+    [SerializeField] Counter mCounter;
 
     void Start()
     {
         currentHealth = maxHealth;
-        UpdateCounter();
+        UpdateCurrent();
+        UpdateMax();
     }
 
     public void Damage(int value)
@@ -26,7 +28,18 @@ public class PlayerHealth : MonoBehaviour
             currentHealth = 0;
             Kill();
         }
-        UpdateCounter();
+        UpdateCurrent();
+    }
+
+    public void IncreaseHealth(int increase, bool heal = true)
+    {
+        maxHealth += increase;
+        if (maxHealth < 0)
+            maxHealth = 0;
+        if (heal)
+            Heal(increase);
+        UpdateCurrent();
+        UpdateMax();
     }
 
     public void Heal(int value)
@@ -36,13 +49,19 @@ public class PlayerHealth : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
-        UpdateCounter();
+        UpdateCurrent();
     }
 
-    void UpdateCounter()
+    void UpdateCurrent()
     {
-        if (counter == null) return;
-        counter.SetText(currentHealth.ToString(), 0);
+        if (cCounter == null) return;
+        cCounter.SetText(currentHealth.ToString(), 0);
+    }
+
+    void UpdateMax()
+    {
+        if (mCounter == null) return;
+        mCounter.SetText(maxHealth.ToString(), 0);
     }
 
     public void Kill()

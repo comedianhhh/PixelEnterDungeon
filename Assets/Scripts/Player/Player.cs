@@ -13,8 +13,10 @@ public class Player : Singleton<Player>
     public PlayerWallet Wallet { get { return _wallet; } }
     PlayerWallet _wallet;
 
-    void Start()
+    protected override void Awake()
     {
+        base.Awake();
+
         _health = GetComponent<PlayerHealth>();
         _damage = GetComponent<PlayerDamage>();
         _wallet = GetComponent<PlayerWallet>();

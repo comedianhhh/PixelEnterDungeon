@@ -15,7 +15,7 @@ public class EC_Health : MonoBehaviour
     EC_Animator anim;
     [SerializeField] Counter counter;
 
-    void Start()
+    void Awake()
     {
         anim = GetComponentInChildren<EC_Animator>();
 
@@ -56,6 +56,7 @@ public class EC_Health : MonoBehaviour
     public void Kill()
     {
         deathEvent.Invoke();
+        ArtifactManager.instance.TriggerKillEnemy();
 
         GetComponent<EC_Entity>().Remove();
     }

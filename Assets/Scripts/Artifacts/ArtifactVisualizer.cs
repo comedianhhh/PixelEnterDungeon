@@ -17,6 +17,7 @@ public class ArtifactVisualizer : MonoBehaviour
         sr.sprite = artifact.sprite;
         anim = GetComponentInChildren<ScaleAnimator>();
         click = GetComponent<Clickable>();
+        click.tooltip = artifact.tooltip;
         ps = GetComponentInChildren<ParticleSystem>();
 
         this.artifact = artifact;

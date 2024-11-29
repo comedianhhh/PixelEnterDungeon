@@ -30,6 +30,12 @@ public class TurnManager : Singleton<TurnManager>
         _currentState.EnterState();
     }
 
+    public void StopTurnManager()
+    {
+        _currentState?.ExitState();
+        _currentState = null;
+    }
+
     void Update()
     {
         if (_currentState != null)

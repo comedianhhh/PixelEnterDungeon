@@ -11,6 +11,7 @@ public class Room
         this.parentRoom = parentRoom;
         children = new List<Room>();
         type = bossRoom ? RoomType.boss : RoomType.normal;
+        entered = false;
     }
 
     public List<EC_Entity> roomEntities;
@@ -20,6 +21,7 @@ public class Room
     
     // Variables
     public int depth;
+    bool entered;
 
     public bool Clear { get { return CheckClear(); } }
     /// <summary>
@@ -51,6 +53,15 @@ public class Room
         for (int i = 0; i < roomEntities.Count; i++)
         {
             roomEntities[i].IsEnabled(true);
+        }
+
+        if (!entered)
+        {
+            entered = true;
+
+            ArtifactManager.instance.TriggerEnterRoom();
+            if (type == RoomType.boss)
+                ArtifactManager.instance.TriggerEnterBossRoom();
         }
     }
 

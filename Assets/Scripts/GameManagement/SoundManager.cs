@@ -12,6 +12,15 @@ namespace benjohnson
         [SerializeField] List<AudioProfile> clips;
         [SerializeField] List<AudioProfile> music;
 
+        public void PlaySound(string id)
+        {
+            for (int i = 0; i < clips.Count; i++)
+            {
+                if (clips[i].name == id)
+                    PlaySound(i);
+            }
+        }
+
         public void PlaySound(int i)
         {
             effectsSource.PlayOneShot(clips[i].Clip(), clips[i].volume);
@@ -26,6 +35,7 @@ namespace benjohnson
     [System.Serializable]
     public struct AudioProfile
     {
+        public string name;
         public AudioClip[] clips;
         public AudioClip Clip()
         {

@@ -7,6 +7,8 @@ public class ArtifactManager : Singleton<ArtifactManager>
 {
     List<Artifact> artifacts;
 
+    [SerializeField] List<A_Base> TESTS = new List<A_Base>();
+
     [Header("Components")]
     [SerializeField] GameObject visualizerGO;
 
@@ -17,12 +19,20 @@ public class ArtifactManager : Singleton<ArtifactManager>
         artifacts = new List<Artifact>();
     }
 
+    private void Start()
+    {
+        foreach (A_Base a in TESTS)
+            AddArtifact(a);
+    }
+
     public void AddArtifact(A_Base artifact)
     {
-        artifacts.Add(new Artifact(artifact, Instantiate(visualizerGO, transform.position + new Vector3(artifacts.Count * 2.5f, 0), Quaternion.identity, transform).GetComponent<ArtifactVisualizer>()));
+        Artifact _a = new Artifact(artifact, Instantiate(visualizerGO, transform.position + new Vector3(artifacts.Count * 2.5f, 0), Quaternion.identity, transform).GetComponent<ArtifactVisualizer>());
+        artifacts.Add(_a);
 
         // Trigger pickup
         artifact.OnPickup();
+        _a.TryTrigger();
     }
 
     class Artifact
@@ -108,6 +118,15 @@ public class ArtifactManager : Singleton<ArtifactManager>
         foreach (Artifact artifact in artifacts)
         {
             artifact.artifact.OnDealDamage();
+            artifact.TryTrigger();
+        }
+    }
+
+    public void TriggerKillEnemy()
+    {
+        foreach (Artifact artifact in artifacts)
+        {
+            artifact.artifact.OnKillEnemy();
             artifact.TryTrigger();
         }
     }

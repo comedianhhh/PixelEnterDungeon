@@ -12,6 +12,12 @@ public class PlayerDamage : MonoBehaviour
         UpdateCounter();
     }
 
+    public void IncreaseDamage(int increase)
+    {
+        damage += increase;
+        UpdateCounter();
+    }
+
     public void Damage(EC_Health _target)
     {
         _target.Damage(damage);

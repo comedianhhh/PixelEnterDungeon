@@ -9,6 +9,8 @@ public class EC_StageKey : MonoBehaviour
     public void UnlockKeyDoor()
     {
         keyDoor.SetLocked(false, true);
-        Instantiate(keyObject, transform.position, Quaternion.identity);
+        GameObject keyGO = Instantiate(keyObject, transform.position, Quaternion.identity);
+        keyGO.transform.parent = transform;
+        keyGO.transform.parent = null;
     }
 }

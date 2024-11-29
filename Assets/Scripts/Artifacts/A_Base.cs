@@ -4,7 +4,6 @@ using UnityEngine;
 
 public abstract class A_Base : ScriptableObject
 {
-    public string a_name;
     public Sprite sprite;
     public Sprite tooltip;
 
@@ -18,5 +17,6 @@ public abstract class A_Base : ScriptableObject
     public virtual void OnClearRoom() { }
     public virtual void OnTakeDamage() { }
     public virtual void OnDealDamage() { }
+    public virtual void OnKillEnemy() { }
     public virtual void OnPickup() { }
 }

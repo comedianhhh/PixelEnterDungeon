@@ -139,9 +139,6 @@ public class DungeonManager : Singleton<DungeonManager>
         // Enter next room
         currentRoom = nextRoom;
         currentRoom.EnterRoom();
-        ArtifactManager.instance.TriggerEnterRoom();
-        if (currentRoom.type == Room.RoomType.boss)
-            ArtifactManager.instance.TriggerEnterBossRoom();
 
         // Update grid
         gridLayout.Arrange(true);
@@ -236,7 +233,7 @@ public class DungeonManager : Singleton<DungeonManager>
     /// </summary>
     public EC_Entity SpawnEntity(EC_Entity entityToSpawn, Room room)
     {
-        EC_Entity _entity = Instantiate(entityToSpawn.gameObject).GetComponent<EC_Entity>();
+        EC_Entity _entity = Instantiate(entityToSpawn.gameObject, transform).GetComponent<EC_Entity>();
         room.roomEntities.Add(_entity);
         _entity.IsEnabled(false);
         _entity.room = room;
