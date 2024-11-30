@@ -16,8 +16,8 @@ public class EC_Damage : MonoBehaviour
 
     public void Attack()
     {
-        Player.instance.Health.Damage(damage);
         GetComponentInChildren<EC_Animator>()?.Squash(1.5f, 1.5f);
+        Player.instance.Health.Damage(damage);
     }
 
     void UpdateCounter()

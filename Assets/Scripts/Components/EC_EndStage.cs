@@ -5,6 +5,6 @@ public class EC_EndStage : MonoBehaviour
 {
     public void NextStage()
     {
-        GameManager.instance.LoadNextStage();
+        GameManager.instance.LoadShop();
     }
 }

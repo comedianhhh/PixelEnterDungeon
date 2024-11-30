@@ -9,12 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e840779db916f3438a03b4c22f3269a, type: 3}
-  m_Name: Dying Heart
+  m_Script: {fileID: 11500000, guid: a3e27b968c73f44479bfe3a25549d29f, type: 3}
+  m_Name: Shiny Egg
   m_EditorClassIdentifier: 
-  sprite: {fileID: -1924145589, guid: 5f96ac13ecbb87b4ea25cd6068b0b28e, type: 3}
-  tooltip: {fileID: 0}
-  triggered: 1
-  loseAmount: 1
-  hpGain: 30
-  damageGain: 6
+  sprite: {fileID: -250119025, guid: 5f96ac13ecbb87b4ea25cd6068b0b28e, type: 3}
+  tooltip: {fileID: -1267754365, guid: 5a6a6c5257fc377479907d96b30ef32c, type: 3}
+  triggered: 0
+  healAmount: 1

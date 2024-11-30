@@ -22,7 +22,9 @@ namespace benjohnson
 
         public void UnloadScene(int id)
         {
-            UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(id);
+            Scene scene = UnityEngine.SceneManagement.SceneManager.GetSceneByBuildIndex(id);
+            if (scene.isLoaded)
+                UnityEngine.SceneManagement.SceneManager.UnloadSceneAsync(id);
         }
     }
 }

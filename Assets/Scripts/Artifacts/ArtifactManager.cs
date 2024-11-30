@@ -7,7 +7,7 @@ public class ArtifactManager : Singleton<ArtifactManager>
 {
     List<Artifact> artifacts;
 
-    [SerializeField] List<A_Base> TESTS = new List<A_Base>();
+    [SerializeField] List<A_Base> startingArtifacts = new List<A_Base>();
 
     [Header("Components")]
     [SerializeField] GameObject visualizerGO;
@@ -21,13 +21,13 @@ public class ArtifactManager : Singleton<ArtifactManager>
 
     private void Start()
     {
-        foreach (A_Base a in TESTS)
+        foreach (A_Base a in startingArtifacts)
             AddArtifact(a);
     }
 
     public void AddArtifact(A_Base artifact)
     {
-        Artifact _a = new Artifact(artifact, Instantiate(visualizerGO, transform.position + new Vector3(artifacts.Count * 2.5f, 0), Quaternion.identity, transform).GetComponent<ArtifactVisualizer>());
+        Artifact _a = new Artifact(artifact, Instantiate(visualizerGO, transform.position + new Vector3(artifacts.Count * 2.25f, 0), Quaternion.identity, transform).GetComponent<ArtifactVisualizer>());
         artifacts.Add(_a);
 
         // Trigger pickup
@@ -73,6 +73,15 @@ public class ArtifactManager : Singleton<ArtifactManager>
         foreach (Artifact artifact in artifacts)
         {
             artifact.artifact.OnEndOfTurn();
+            artifact.TryTrigger();
+        }
+    }
+
+    public void TriggerStartOfEnemyTurn()
+    {
+        foreach (Artifact artifact in artifacts)
+        {
+            artifact.artifact.OnStartOfEnemyTurn();
             artifact.TryTrigger();
         }
     }
@@ -127,6 +136,24 @@ public class ArtifactManager : Singleton<ArtifactManager>
         foreach (Artifact artifact in artifacts)
         {
             artifact.artifact.OnKillEnemy();
+            artifact.TryTrigger();
+        }
+    }
+
+    public void TriggerChestOpen()
+    {
+        foreach (Artifact artifact in artifacts)
+        {
+            artifact.artifact.OnChestOpen();
+            artifact.TryTrigger();
+        }
+    }
+
+    public void TriggerBossDefeated()
+    {
+        foreach (Artifact artifact in artifacts)
+        {
+            artifact.artifact.OnBossDefeated();
             artifact.TryTrigger();
         }
     }

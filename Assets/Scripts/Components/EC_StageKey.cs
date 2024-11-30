@@ -12,5 +12,6 @@ public class EC_StageKey : MonoBehaviour
         GameObject keyGO = Instantiate(keyObject, transform.position, Quaternion.identity);
         keyGO.transform.parent = transform;
         keyGO.transform.parent = null;
+        ArtifactManager.instance.TriggerChestOpen();
     }
 }

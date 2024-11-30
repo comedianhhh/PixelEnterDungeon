@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04b435fca089cf7498ef1dcb792b5731, type: 3}
-  m_Name: Strange Mushroom
+  m_Script: {fileID: 11500000, guid: 186995230276aa54e9067637d28e8c16, type: 3}
+  m_Name: Vengeful Ring
   m_EditorClassIdentifier: 
-  sprite: {fileID: 1072975331, guid: 5f96ac13ecbb87b4ea25cd6068b0b28e, type: 3}
-  tooltip: {fileID: 0}
+  sprite: {fileID: -1618185885, guid: 5f96ac13ecbb87b4ea25cd6068b0b28e, type: 3}
+  tooltip: {fileID: -535256465, guid: 5a6a6c5257fc377479907d96b30ef32c, type: 3}
   triggered: 0
-  healAmount: 6
+  damageIncrease: 10
+  healthDecrease: 10

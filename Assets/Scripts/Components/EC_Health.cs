@@ -27,6 +27,7 @@ public class EC_Health : MonoBehaviour
     public void Damage(int value)
     {
         damageEvent.Invoke();
+        DamagePopup.CreatePopup(transform.position, value);
         SoundManager.instance.PlaySound("Enemy Hurt");
         ArtifactManager.instance.TriggerDealDamage();
         currentHealth -= value;

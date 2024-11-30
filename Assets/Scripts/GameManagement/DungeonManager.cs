@@ -247,10 +247,11 @@ public class DungeonManager : Singleton<DungeonManager>
     {
         if (portalGenerated) return;
 
-        Debug.Log("Spawned Portal");
         EC_Entity portal = SpawnEntity(portalPrefab, bossRoom);
         portal.IsEnabled(true);
         portalGenerated = true;
         gridLayout.Arrange();
+
+        ArtifactManager.instance.TriggerBossDefeated();
     }
 }

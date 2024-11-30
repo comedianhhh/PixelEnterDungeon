@@ -12,6 +12,7 @@ public class TurnStateEnemy : TurnBaseState
 
     public override void EnterState()
     {
+        ArtifactManager.instance.TriggerStartOfEnemyTurn();
         _hostiles = DungeonManager.instance.CurrentRoom.GetHostiles();
         _timeSinceAttack = 0;
     }
@@ -26,7 +27,8 @@ public class TurnStateEnemy : TurnBaseState
         if (_hostiles.Count > 0 && _timeSinceAttack >= _ctx.timeBetweenAttacks)
         {
             // Attack
-            _hostiles[0].Attack();
+            if (_hostiles[0] != null)
+                _hostiles[0].Attack();
             _hostiles.RemoveAt(0);
             _timeSinceAttack = 0;
         }

@@ -13,7 +13,7 @@ public class GameManager : Singleton<GameManager>
         // Load player
         SceneManager.instance.LoadScene(2);
 
-        LoadNextStage(false);
+        LoadNextStage();
     }
 
     public void DungeonLoaded()
@@ -22,16 +22,31 @@ public class GameManager : Singleton<GameManager>
         turnManager.StartTurnManager();
     }
 
-    public void LoadNextStage(bool unload = true)
+    public void LoadShop()
     {
         // Stop the game
         turnManager.StopTurnManager();
 
+        // Unload dungeon
+        SceneManager.instance.UnloadScene(3);
+
+        // Load shop
+        SceneManager.instance.LoadScene(4);
+    }
+
+    public void LoadNextStage()
+    {
         //stage++;
 
-        // Reload dungeon
-        if (unload)
-            SceneManager.instance.UnloadScene(3);
+        // Unload shop
+        SceneManager.instance.UnloadScene(4);
+
+        // Load dungeon
         SceneManager.instance.LoadScene(3);
+    }
+
+    void LoadWinScreen()
+    {
+
     }
 }

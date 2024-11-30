@@ -12,6 +12,7 @@ public abstract class A_Base : ScriptableObject
 
     public virtual void OnStartOfTurn() { }
     public virtual void OnEndOfTurn() { }
+    public virtual void OnStartOfEnemyTurn() { }
     public virtual void OnEnterRoom() { }
     public virtual void OnEnterBossRoom() { }
     public virtual void OnClearRoom() { }
@@ -19,4 +20,6 @@ public abstract class A_Base : ScriptableObject
     public virtual void OnDealDamage() { }
     public virtual void OnKillEnemy() { }
     public virtual void OnPickup() { }
+    public virtual void OnChestOpen() { }
+    public virtual void OnBossDefeated() { }
 }

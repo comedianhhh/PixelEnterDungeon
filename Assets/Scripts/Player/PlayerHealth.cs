@@ -24,6 +24,7 @@ public class PlayerHealth : MonoBehaviour
     {
         ArtifactManager.instance.TriggerTakeDamage();
         SoundManager.instance.PlaySound("Player Hurt");
+        DamagePopup.CreatePopup(transform.position, value);
         currentHealth -= value;
         if (currentHealth <= 0)
         {
@@ -33,13 +34,14 @@ public class PlayerHealth : MonoBehaviour
         UpdateCurrent();
     }
 
-    public void IncreaseHealth(int increase, bool heal = true)
+    public void IncreaseHealth(int increase)
     {
         maxHealth += increase;
+        currentHealth += increase;
         if (maxHealth < 0)
             maxHealth = 0;
-        if (heal)
-            Heal(increase);
+        if (currentHealth < 0)
+            currentHealth = 0;
         UpdateCurrent();
         UpdateMax();
     }
@@ -47,10 +49,10 @@ public class PlayerHealth : MonoBehaviour
     public void Heal(int value)
     {
         currentHealth += value;
+        if (currentHealth < 0)
+            currentHealth = 0;
         if (currentHealth > maxHealth)
-        {
             currentHealth = maxHealth;
-        }
         UpdateCurrent();
     }
 
