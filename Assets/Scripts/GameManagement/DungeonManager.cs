@@ -61,6 +61,8 @@ public class DungeonManager : Singleton<DungeonManager>
         // Generate boss room
         GenerateBossRoom(stage);
 
+        TESTPORTAL();
+
         // Enter first room
         SwitchRoom(rooms[0]);
 
@@ -253,5 +255,15 @@ public class DungeonManager : Singleton<DungeonManager>
         gridLayout.Arrange();
 
         ArtifactManager.instance.TriggerBossDefeated();
+    }
+
+    public void TESTPORTAL()
+    {
+        if (portalGenerated) return;
+
+        EC_Entity portal = SpawnEntity(portalPrefab, rooms[0]);
+        portal.IsEnabled(true);
+        portalGenerated = true;
+        gridLayout.Arrange();
     }
 }

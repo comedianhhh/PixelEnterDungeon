@@ -196,7 +196,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 43b845eaa0abed545925e28978da2b07, type: 3}
+  m_Sprite: {fileID: 483517832, guid: 0facf01f9c4ec4449b56045cf6e4adae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -268,7 +268,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4, y: 4}
+  m_Size: {x: 2, y: 2}
   m_EdgeRadius: 0
 --- !u!114 &1410745730
 MonoBehaviour:
@@ -374,6 +374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75584cb49255d314f88be0aec7f3da8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopItemPrefab: {fileID: 7666212214352877540, guid: 98ce6e290bfa04645a0331900857e8d0, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

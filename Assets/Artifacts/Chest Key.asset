@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: -1409258563, guid: 5f96ac13ecbb87b4ea25cd6068b0b28e, type: 3}
   tooltip: {fileID: 674324238, guid: 5a6a6c5257fc377479907d96b30ef32c, type: 3}
+  cost: 1
   triggered: 0
   numberOfCoins: 30

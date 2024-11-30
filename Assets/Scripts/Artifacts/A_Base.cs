@@ -6,6 +6,7 @@ public abstract class A_Base : ScriptableObject
 {
     public Sprite sprite;
     public Sprite tooltip;
+    public int cost;
 
     // Variables
     [HideInInspector] public bool triggered = false;

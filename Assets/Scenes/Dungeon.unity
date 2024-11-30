@@ -180,7 +180,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 698135874}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7986df01aed52934d8a4b0b386726caf, type: 3}
+  m_Script: {fileID: 11500000, guid: 6dc90566e32a8fe4986736c3b3e47af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   backDoorPrefab: {fileID: 5931461512106533215, guid: 20d44f7a86a950c4891754cc54761227, type: 3}
@@ -196,7 +196,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b546e56e2a2bdc147bd824c937a7c440, type: 2}
   maxDepth: 3
   maxDoors: 2
-  oddsPower: 1.33
+  oddsPower: 1.35
   mapRenderer: {fileID: 1960039411}
 --- !u!1 &1960039408
 GameObject:

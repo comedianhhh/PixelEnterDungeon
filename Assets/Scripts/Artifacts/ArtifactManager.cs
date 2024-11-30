@@ -9,6 +9,30 @@ public class ArtifactManager : Singleton<ArtifactManager>
 
     [SerializeField] List<A_Base> startingArtifacts = new List<A_Base>();
 
+    public List<A_Base> undiscoveredArtifacts;
+
+    /// <summary>
+    /// Returns a random set of artifacts from undiscoveredArtifacts list
+    /// </summary>
+    public List<A_Base> GetRandomArtifacts(int maxItems)
+    {
+        List<A_Base> shuffledItems = new List<A_Base>(undiscoveredArtifacts);
+
+        // Shuffle
+        for (int i = shuffledItems.Count - 1; i > 0; i--)
+        {
+            int randomIndex = Random.Range(0, i + 1);
+            A_Base temp = shuffledItems[i];
+            shuffledItems[i] = shuffledItems[randomIndex];
+            shuffledItems[randomIndex] = temp;
+        }
+
+        // Select up to maxItems
+        List<A_Base> selectedItems = shuffledItems.GetRange(0, Mathf.Min(maxItems, shuffledItems.Count));
+
+        return selectedItems;
+    }
+
     [Header("Components")]
     [SerializeField] GameObject visualizerGO;
 
@@ -29,6 +53,7 @@ public class ArtifactManager : Singleton<ArtifactManager>
     {
         Artifact _a = new Artifact(artifact, Instantiate(visualizerGO, transform.position + new Vector3(artifacts.Count * 2.25f, 0), Quaternion.identity, transform).GetComponent<ArtifactVisualizer>());
         artifacts.Add(_a);
+        undiscoveredArtifacts.Remove(artifact);
 
         // Trigger pickup
         artifact.OnPickup();

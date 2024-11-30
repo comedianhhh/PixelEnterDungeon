@@ -36,7 +36,10 @@ public class ArrangeGrid : MonoBehaviour
                 column * spacing.x - centerOffset.x + offset.x,
                 -row * spacing.y + centerOffset.y + offset.y
             );
-            child.GetComponentInChildren<EC_Animator>().SetTargetPosition(newPosition);
+            if (child.GetComponentInChildren<EC_Animator>())
+                child.GetComponentInChildren<EC_Animator>().SetTargetPosition(newPosition);
+            else
+                child.position = newPosition;
             if (_force) child.transform.localPosition = newPosition;
         }
     }

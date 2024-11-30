@@ -2,25 +2,23 @@ using UnityEngine;
 
 public class ArtifactVisualizer : MonoBehaviour
 {
-    A_Base artifact;
+    [HideInInspector] public A_Base artifact;
 
     // Components
     SpriteRenderer sr;
     ScaleAnimator anim;
     Clickable click;
-    ParticleSystem ps;
 
-    public void Visualize(A_Base artifact)
+    public virtual void Visualize(A_Base artifact)
     {
+        this.artifact = artifact;
+
         // Set components
-        sr = GetComponentInChildren<SpriteRenderer>();
-        sr.sprite = artifact.sprite;
         anim = GetComponentInChildren<ScaleAnimator>();
+        sr = anim.GetComponent<SpriteRenderer>();
+        sr.sprite = artifact.sprite;
         click = GetComponent<Clickable>();
         click.tooltip = artifact.tooltip;
-        ps = GetComponentInChildren<ParticleSystem>();
-
-        this.artifact = artifact;
     }
 
     public void Trigger()

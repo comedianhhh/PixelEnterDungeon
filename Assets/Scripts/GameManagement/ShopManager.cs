@@ -1,25 +1,36 @@
 using benjohnson;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ShopManager : Singleton<ShopManager>
 {
     // Components
-    GridLayout gridLayout;
+    ArrangeGrid gridLayout;
+
+    [SerializeField] GameObject shopItemPrefab;
 
     protected override void Awake()
     {
         base.Awake();
 
-        gridLayout = GetComponent<GridLayout>();
+        gridLayout = GetComponent<ArrangeGrid>();
+
+
     }
-    private void Start()
+    void Start()
     {
         LoadShop();
     }
 
     void LoadShop()
     {
-
+        List<A_Base> artifacts = ArtifactManager.instance.GetRandomArtifacts(6);
+        foreach (A_Base a in artifacts)
+        {
+            Instantiate(shopItemPrefab, transform).GetComponent<ShopItem>().Visualize(a);
+        }
+        gridLayout.Arrange();
     }
 
     public void ExitShop()
