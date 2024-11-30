@@ -9,11 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f28749fd3e83ff1409c129e7242a1870, type: 3}
-  m_Name: Coin Pouch
+  m_Script: {fileID: 11500000, guid: 24f37e2a3d1a0d94dbabe20ec09fb392, type: 3}
+  m_Name: Lucky Fish
   m_EditorClassIdentifier: 
-  sprite: {fileID: -739807330, guid: 5f96ac13ecbb87b4ea25cd6068b0b28e, type: 3}
+  sprite: {fileID: 294783613, guid: 5f96ac13ecbb87b4ea25cd6068b0b28e, type: 3}
   tooltip: {fileID: 0}
   cost: 100
   triggered: 0
-  coins: 650

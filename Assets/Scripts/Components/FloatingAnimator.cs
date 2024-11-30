@@ -13,7 +13,7 @@ public class FloatingAnimator : MonoBehaviour
     void Start()
     {
         originalPosition = transform.localPosition;
-        elapsed += Random.Range(0.0f, 1.0f);
+        elapsed += Random.Range(0.0f, 10.0f);
     }
 
     private void Update()

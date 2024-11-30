@@ -5,12 +5,17 @@ public class PlayerWallet : MonoBehaviour
 {
     public int money;
 
+    // Variables
+    [HideInInspector] public int extraCoins; // When picking up coins, also add extracoins
+
     // Components
     [SerializeField] Counter counter;
     ScaleAnimator anim;
 
     void Start()
     {
+        extraCoins = 0;
+
         anim = counter.transform.parent.GetComponent<ScaleAnimator>();
         UpdateCounter();
     }
@@ -23,8 +28,11 @@ public class PlayerWallet : MonoBehaviour
             ShopManager.instance.ReloadPrices();
     }
 
-    public void AddMoney(int value)
+    public void AddMoney(int value, int count = 1)
     {
+        value += extraCoins * count;
+        if (value <= 0)
+            return;
         money += value;
         UpdateCounter();
         anim.SetScale(new Vector2(1.5f, 1.5f));

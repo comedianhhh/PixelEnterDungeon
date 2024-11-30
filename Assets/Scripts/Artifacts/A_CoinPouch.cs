@@ -9,6 +9,7 @@ public class A_CoinPouch : A_Base
     {
         triggered = true;
 
-        FindObjectOfType<CoinSpawner>().CreateCoins(coins);
+        Player.instance.Wallet.AddMoney(coins, coins);
+        Player.instance.Wallet.extraCoins = -9999;
     }
 }

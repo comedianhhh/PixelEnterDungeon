@@ -9,11 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f28749fd3e83ff1409c129e7242a1870, type: 3}
-  m_Name: Coin Pouch
+  m_Script: {fileID: 11500000, guid: 3b314412b3fa9684eba12b27a37e01eb, type: 3}
+  m_Name: Hot Pepper
   m_EditorClassIdentifier: 
-  sprite: {fileID: -739807330, guid: 5f96ac13ecbb87b4ea25cd6068b0b28e, type: 3}
+  sprite: {fileID: 1619205144, guid: 5f96ac13ecbb87b4ea25cd6068b0b28e, type: 3}
   tooltip: {fileID: 0}
-  cost: 100
+  cost: 75
   triggered: 0
-  coins: 650
+  probability: 0.25
+  damageIncrease: 1

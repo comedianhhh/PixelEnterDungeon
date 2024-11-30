@@ -8,8 +8,9 @@ public class ArtifactManager : Singleton<ArtifactManager>
     List<Artifact> artifacts;
 
     [SerializeField] List<A_Base> startingArtifacts = new List<A_Base>();
-
     public List<A_Base> undiscoveredArtifacts;
+
+    List<Artifact> queue;
 
     /// <summary>
     /// Returns a random set of artifacts from undiscoveredArtifacts list

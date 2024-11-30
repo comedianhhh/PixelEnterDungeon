@@ -10,6 +10,6 @@ public class A_ChestKey : A_Base
     {
         triggered = true;
 
-        FindObjectOfType<CoinSpawner>().CreateCoins(numberOfCoins);
+        Player.instance.Wallet.AddMoney(numberOfCoins, numberOfCoins);
     }
 }
