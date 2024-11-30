@@ -31,10 +31,19 @@ public class ShopManager : Singleton<ShopManager>
             Instantiate(shopItemPrefab, transform).GetComponent<ShopItem>().Visualize(a);
         }
         gridLayout.Arrange();
+        ReloadPrices();
     }
 
     public void ExitShop()
     {
         GameManager.instance.LoadNextStage();
+    }
+
+    public void ReloadPrices()
+    {
+        foreach (Transform child in transform)
+        {
+            child.GetComponent<ShopItem>().UpdateCounter(Player.instance.Wallet.money);
+        }
     }
 }

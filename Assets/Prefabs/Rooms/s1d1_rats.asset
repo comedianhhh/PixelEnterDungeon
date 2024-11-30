@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0699b63406670a74693f421a87b2b389, type: 3}
-  m_Name: Torch
+  m_Script: {fileID: 11500000, guid: 81822b26c2c2894459a7466811c9d50f, type: 3}
+  m_Name: s1d1_rats
   m_EditorClassIdentifier: 
-  sprite: {fileID: -1921682515, guid: 5f96ac13ecbb87b4ea25cd6068b0b28e, type: 3}
-  tooltip: {fileID: -2142438908, guid: 5a6a6c5257fc377479907d96b30ef32c, type: 3}
-  cost: 100
-  triggered: 0
-  damage: 2
+  entities:
+  - {fileID: 5931461512106533215, guid: 9d9b335ad4e9aee4290f859f6f10bc28, type: 3}
+  - {fileID: 5931461512106533215, guid: 9d9b335ad4e9aee4290f859f6f10bc28, type: 3}

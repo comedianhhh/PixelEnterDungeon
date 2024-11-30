@@ -320,10 +320,21 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 822c108ba4c3b0a45a89799866b71ae6, type: 3}
     - {fileID: 8300000, guid: 7e334d5c25f4cd04d83d003d2c94f1c0, type: 3}
     volume: 0.5
+  - name: Not enough money
+    clips:
+    - {fileID: 8300000, guid: 45065f72b54a09745b71e15275840337, type: 3}
+    volume: 0.5
+  - name: Buy
+    clips:
+    - {fileID: 8300000, guid: a9b21da82fc48614a97f27b6d938f88f, type: 3}
+    volume: 0.5
+  - name: Heal
+    clips:
+    - {fileID: 8300000, guid: 7fa9c738776d00a4e88f774a5eb9e143, type: 3}
+    volume: 0.5
   music:
   - name: Music
     clips:
-    - {fileID: 8300000, guid: 275bce07154b69b428960a42fbb9876a, type: 3}
     - {fileID: 8300000, guid: 4a733608e589efe49bb9e3c4d46628e1, type: 3}
     - {fileID: 8300000, guid: 6b078d21ab2bd36459b69e00d82fc7dc, type: 3}
     volume: 0.5

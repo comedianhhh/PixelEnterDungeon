@@ -6,26 +6,12 @@ using UnityEngine;
 
 public class DungeonManager : Singleton<DungeonManager>
 {
+    public GenerationSettingsSO gen;
+
     public Room CurrentRoom { get { return currentRoom; } }
     Room currentRoom;
     Room bossRoom;
     List<Room> rooms;
-
-    [Header("Entity Prefabs")]
-    [SerializeField] GameObject backDoorPrefab;
-    [SerializeField] GameObject doorPrefab;
-    [SerializeField] GameObject bossDoorPrefab;
-    [SerializeField] GameObject bossKeyPrefab;
-    [SerializeField] GameObject portalPrefab;
-
-    [Header("Room Prefabs")]
-    [SerializeField] List<RoomGroupSO> roomDepth = new List<RoomGroupSO>();
-    [SerializeField] List<RoomGroupSO> bossRooms = new List<RoomGroupSO>();
-
-    [Header("Stage Generation Settings")]
-    [SerializeField] int maxDepth = 3;
-    [SerializeField] int maxDoors = 2;
-    [SerializeField, Range(0.1f, 3f)] float oddsPower = 1;
 
     // Generation variables
     List<EC_Door> doorsToFill; // List of doors with no destination yet, generate a room for these doors
@@ -55,13 +41,11 @@ public class DungeonManager : Singleton<DungeonManager>
     public void GenerateDungeon(int stage)
     {
         // Generate first room
-        CreateRoom(0, null);
+        CreateRoom(stage, 0, null);
         // Iteratively generate layers
-        GenerateLayer(1);
+        GenerateLayer(stage, 1);
         // Generate boss room
         GenerateBossRoom(stage);
-
-        TESTPORTAL();
 
         // Enter first room
         SwitchRoom(rooms[0]);
@@ -87,7 +71,7 @@ public class DungeonManager : Singleton<DungeonManager>
         List<Room> _bossDoorRooms = RoomsAtDepth(_depth, null);
         Room _bossDoorRoom = _bossDoorRooms[Random.Range(0, _bossDoorRooms.Count)];
         // Spawn boss door
-        EC_Entity _bossDoor = SpawnEntity(bossDoorPrefab, _bossDoorRoom);
+        EC_Entity _bossDoor = SpawnEntity(gen.bossDoorPrefab, _bossDoorRoom);
         _bossDoor.GetComponent<EC_Door>().SetLocked(true);
         // Create boss room
         bossRoom = CreateBossRoom(_stage, _depth + 1, _bossDoorRoom);
@@ -97,7 +81,7 @@ public class DungeonManager : Singleton<DungeonManager>
         // Randomly determine boss key room
         List<Room> _keyRooms = RoomsAtDepth(_depth, new List<Room>() { _bossDoorRoom, _bossDoorRoom.parentRoom });
         Room _keyRoom = _keyRooms[Random.Range(0, _keyRooms.Count)];
-        EC_Entity _bossKey = SpawnEntity(bossKeyPrefab, _keyRoom);
+        EC_Entity _bossKey = SpawnEntity(gen.bossKeyPrefab, _keyRoom);
         _bossKey.GetComponent<EC_StageKey>().keyDoor = _bossDoor.GetComponent<EC_Door>();
     }
 
@@ -106,10 +90,10 @@ public class DungeonManager : Singleton<DungeonManager>
     /// Iteratively generates dungeon layers by calling GenerateLayer(depth + 1)
     /// Stops when maxDepth is reached or no doors are left to be filled
     /// </summary>
-    void GenerateLayer(int depth)
+    void GenerateLayer(int stage, int depth)
     {
         // Stop when reached max depth or no doors to fill
-        if (depth > maxDepth || doorsToFill.Count <= 0) return;
+        if (depth > gen.maxDepth || doorsToFill.Count <= 0) return;
 
         // Copy doors list and clear old list
         List<EC_Door> _doorsToFill = new List<EC_Door>();
@@ -121,13 +105,13 @@ public class DungeonManager : Singleton<DungeonManager>
         for (int i = 0; i < _doorsToFill.Count; i++)
         {
             Room _parentRoom = _doorsToFill[i].GetComponent<EC_Entity>().room;
-            Room _newRoom = CreateRoom(depth, _parentRoom);
+            Room _newRoom = CreateRoom(stage, depth, _parentRoom);
             _doorsToFill[i].destination = _newRoom;
             _parentRoom.children.Add(_newRoom);
         }
 
         // Generate next layer
-        GenerateLayer(depth + 1);
+        GenerateLayer(stage, depth + 1);
     }
 
     /// <summary>
@@ -155,7 +139,7 @@ public class DungeonManager : Singleton<DungeonManager>
     /// <summary>
     /// Creates room at depth, fills with doors and entities, returns newly created room
     /// </summary>
-    Room CreateRoom(int _depth, Room _parentRoom)
+    Room CreateRoom(int _stage, int _depth, Room _parentRoom)
     {
         Room _room = new Room(_depth, _parentRoom);
         rooms.Add(_room);
@@ -163,22 +147,22 @@ public class DungeonManager : Singleton<DungeonManager>
         // If not starting room, spawn back door
         if (_depth > 0)
         {
-            EC_Entity _back = SpawnEntity(backDoorPrefab, _room);
+            EC_Entity _back = SpawnEntity(gen.backDoorPrefab, _room);
             _back.GetComponent<EC_Door>().destination = _parentRoom;
         }
         // Spawn doors according to depth
-        for (int i = 0; i < maxDoors; i++)
+        for (int i = 0; i < gen.maxDoors; i++)
         {
-            if (Random.Range(0.0f, 1.0f) <= 1 - Mathf.Pow((float)_depth / (float)maxDepth, oddsPower))
+            if (Random.Range(0.0f, 1.0f) <= 1 - Mathf.Pow((float)_depth / (float)gen.maxDepth, gen.oddsPower))
             {
-                EC_Entity _door = SpawnEntity(doorPrefab, _room);
+                EC_Entity _door = SpawnEntity(gen.doorPrefab, _room);
                 doorsToFill.Add(_door.GetComponent<EC_Door>());
             }
         }
         // Add entities based on room depth
         if (_depth > 0)
         {
-            List<GameObject> entities = roomDepth[_depth - 1].RandomRoom().entities;
+            List<GameObject> entities = gen.rooms[_stage].RandomRoom(_depth - 1).entities;
             for (int i = 0; i < entities.Count; i++)
                 SpawnEntity(entities[i].gameObject, _room);
         }
@@ -195,10 +179,10 @@ public class DungeonManager : Singleton<DungeonManager>
         rooms.Add(_room);
 
         // Back door
-        EC_Entity _back = SpawnEntity(backDoorPrefab, _room);
+        EC_Entity _back = SpawnEntity(gen.backDoorPrefab, _room);
         _back.GetComponent<EC_Door>().destination = _parentRoom;
         // Spawn boss room entities
-        List<GameObject> _entities = bossRooms[_stage].RandomRoom().entities;
+        List<GameObject> _entities = gen.rooms[_stage].RandomBossRoom().entities;
         for (int i = 0; i < _entities.Count; i++)
             SpawnEntity(_entities[i].gameObject, _room);
 
@@ -249,21 +233,11 @@ public class DungeonManager : Singleton<DungeonManager>
     {
         if (portalGenerated) return;
 
-        EC_Entity portal = SpawnEntity(portalPrefab, bossRoom);
+        EC_Entity portal = SpawnEntity(gen.portalPrefab, bossRoom);
         portal.IsEnabled(true);
         portalGenerated = true;
         gridLayout.Arrange();
 
         ArtifactManager.instance.TriggerBossDefeated();
-    }
-
-    public void TESTPORTAL()
-    {
-        if (portalGenerated) return;
-
-        EC_Entity portal = SpawnEntity(portalPrefab, rooms[0]);
-        portal.IsEnabled(true);
-        portalGenerated = true;
-        gridLayout.Arrange();
     }
 }

@@ -48,6 +48,8 @@ public class PlayerHealth : MonoBehaviour
 
     public void Heal(int value)
     {
+        SoundManager.instance.PlaySound("Heal");
+        DamagePopup.CreatePopup(transform.position, value, true);
         currentHealth += value;
         if (currentHealth < 0)
             currentHealth = 0;

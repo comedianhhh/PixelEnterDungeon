@@ -753,6 +753,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1fa70dbd84fa2784097a2afaa18b8572, type: 2}
   - {fileID: 11400000, guid: cb2a0ebaf96207e4ab090bd96d10c68a, type: 2}
   - {fileID: 11400000, guid: ccc7033e9e303b54a974c7cfd1248e05, type: 2}
+  - {fileID: 11400000, guid: e689bac1b443a57448c2f1ec5c9f62ba, type: 2}
+  - {fileID: 11400000, guid: 70daadd13dcbfef4198ad93e65ccdb96, type: 2}
   visualizerGO: {fileID: 2208809258184740268, guid: b98374a09c7b97b4b94cf502e23fdb60, type: 3}
 --- !u!4 &1243466385
 Transform:
@@ -888,7 +890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3204104bd7d746c498a4df33c4968bdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 20
+  money: 50
   counter: {fileID: 429867718}
 --- !u!114 &1440973758
 MonoBehaviour:
@@ -916,7 +918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3656bedafb7f94d449113b2f5acef25e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 25
+  maxHealth: 35
   cCounter: {fileID: 505066434}
   mCounter: {fileID: 1110239876}
 --- !u!114 &1440973760
