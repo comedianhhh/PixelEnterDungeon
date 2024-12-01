@@ -10,7 +10,11 @@ public class ArtifactManager : Singleton<ArtifactManager>
     [SerializeField] List<A_Base> startingArtifacts = new List<A_Base>();
     public List<A_Base> undiscoveredArtifacts;
 
-    List<Artifact> queue;
+    [HideInInspector] public List<Artifact> queue;
+    float timeSinceTrigger;
+
+    [Header("Components")]
+    [SerializeField] GameObject visualizerGO;
 
     /// <summary>
     /// Returns a random set of artifacts from undiscoveredArtifacts list
@@ -34,14 +38,12 @@ public class ArtifactManager : Singleton<ArtifactManager>
         return selectedItems;
     }
 
-    [Header("Components")]
-    [SerializeField] GameObject visualizerGO;
-
     protected override void Awake()
     {
         base.Awake();
 
         artifacts = new List<Artifact>();
+        queue = new List<Artifact>();
     }
 
     private void Start()
@@ -50,18 +52,33 @@ public class ArtifactManager : Singleton<ArtifactManager>
             AddArtifact(a);
     }
 
+    private void Update()
+    {
+        if (queue.Count <= 0) return;
+
+        if (timeSinceTrigger >= 0.05f)
+        {
+            queue[0].Trigger();
+            queue.RemoveAt(0);
+            timeSinceTrigger = 0;
+        }
+        else
+            timeSinceTrigger += Time.deltaTime;
+    }
+
     public void AddArtifact(A_Base artifact)
     {
         Artifact _a = new Artifact(artifact, Instantiate(visualizerGO, transform.position + new Vector3(artifacts.Count * 2.25f, 0), Quaternion.identity, transform).GetComponent<ArtifactVisualizer>());
         artifacts.Add(_a);
         undiscoveredArtifacts.Remove(artifact);
+        PlayerStats.instance.artifactsDiscovered++;
 
         // Trigger pickup
         artifact.OnPickup();
         _a.TryTrigger();
     }
 
-    class Artifact
+    public class Artifact
     {
         public A_Base artifact;
         public ArtifactVisualizer visualizer;
@@ -78,8 +95,15 @@ public class ArtifactManager : Singleton<ArtifactManager>
             if (artifact.triggered)
             {
                 artifact.triggered = false;
-                visualizer.Trigger();
+                instance.queue.Add(this);
             }
+        }
+
+        public void Trigger()
+        {
+            artifact.Trigger();
+            visualizer.Trigger();
+            PlayerStats.instance.artifactsTriggered++;
         }
     }
 

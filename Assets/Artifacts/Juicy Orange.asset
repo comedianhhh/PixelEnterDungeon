@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Juicy Orange
   m_EditorClassIdentifier: 
   sprite: {fileID: -236196656, guid: 5f96ac13ecbb87b4ea25cd6068b0b28e, type: 3}
-  tooltip: {fileID: 0}
+  tooltip: {fileID: -233743992, guid: 5a6a6c5257fc377479907d96b30ef32c, type: 3}
   cost: 75
   triggered: 0

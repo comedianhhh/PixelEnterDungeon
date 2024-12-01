@@ -11,6 +11,8 @@ public abstract class A_Base : ScriptableObject
     // Variables
     [HideInInspector] public bool triggered = false;
 
+    public virtual void Trigger() { }
+
     public virtual void OnStartOfTurn() { }
     public virtual void OnEndOfTurn() { }
     public virtual void OnStartOfEnemyTurn() { }

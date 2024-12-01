@@ -7,6 +7,11 @@ public class A_PokingStick : A_Base
 
     public override void OnDealDamage()
     {
+        triggered = true;
+    }
+
+    public override void Trigger()
+    {
         Player.instance.Wallet.AddMoney(coins);
     }
 }

@@ -12,7 +12,7 @@ public class PlayerWallet : MonoBehaviour
     [SerializeField] Counter counter;
     ScaleAnimator anim;
 
-    void Start()
+    void Awake()
     {
         extraCoins = 0;
 
@@ -34,6 +34,9 @@ public class PlayerWallet : MonoBehaviour
         if (value <= 0)
             return;
         money += value;
+        PlayerStats.instance.coinsCollected += value;
+        if (Player.instance == null)
+            return;
         UpdateCounter();
         anim.SetScale(new Vector2(1.5f, 1.5f));
     }

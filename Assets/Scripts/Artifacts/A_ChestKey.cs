@@ -9,7 +9,10 @@ public class A_ChestKey : A_Base
     public override void OnChestOpen()
     {
         triggered = true;
+    }
 
+    public override void Trigger()
+    {
         Player.instance.Wallet.AddMoney(numberOfCoins, numberOfCoins);
     }
 }

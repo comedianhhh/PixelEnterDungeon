@@ -10,9 +10,14 @@ public class A_Torch : A_Base
     {
         List<EC_Damage> hostiles = DungeonManager.instance.CurrentRoom.GetHostiles();
         if (hostiles.Count > 0)
-        {
             triggered = true;
+    }
 
+    public override void Trigger()
+    {
+        List<EC_Damage> hostiles = DungeonManager.instance.CurrentRoom.GetHostiles();
+        if (hostiles.Count > 0)
+        {
             foreach (EC_Damage hostile in hostiles)
                 hostile.GetComponent<EC_Health>().Damage(damage);
         }

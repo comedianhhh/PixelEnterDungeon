@@ -7,7 +7,6 @@ public class EC_Health : MonoBehaviour
     public int maxHealth;
     int currentHealth;
 
-
     [Header("Events")]
     public UnityEvent deathEvent;
     public UnityEvent damageEvent;
@@ -26,6 +25,7 @@ public class EC_Health : MonoBehaviour
 
     public void Damage(int value)
     {
+        PlayerStats.instance.damageDealt += value;
         damageEvent.Invoke();
         DamagePopup.CreatePopup(transform.position, value);
         SoundManager.instance.PlaySound("Enemy Hurt");
@@ -58,6 +58,7 @@ public class EC_Health : MonoBehaviour
 
     public void Kill()
     {
+        PlayerStats.instance.enemiesDefeated++;
         deathEvent.Invoke();
         ArtifactManager.instance.TriggerKillEnemy();
 

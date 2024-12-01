@@ -10,10 +10,13 @@ public class A_SpikyRock : A_Base
     {
         List<EC_Damage> hostiles = DungeonManager.instance.CurrentRoom.GetHostiles();
         if (hostiles.Count > 0)
-        {
             triggered = true;
+    }
 
+    public override void Trigger()
+    {
+        List<EC_Damage> hostiles = DungeonManager.instance.CurrentRoom.GetHostiles();
+        if (hostiles.Count > 0)
             hostiles[Random.Range(0, hostiles.Count)]?.GetComponent<EC_Health>().Damage(damage);
-        }
     }
 }

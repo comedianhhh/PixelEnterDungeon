@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Lucky Fish
   m_EditorClassIdentifier: 
   sprite: {fileID: 294783613, guid: 5f96ac13ecbb87b4ea25cd6068b0b28e, type: 3}
-  tooltip: {fileID: 0}
+  tooltip: {fileID: -1225292192, guid: 5a6a6c5257fc377479907d96b30ef32c, type: 3}
   cost: 100
   triggered: 0

@@ -8,7 +8,10 @@ public class A_KingsMug : A_Base
     public override void OnEnterBossRoom()
     {
         triggered = true;
+    }
 
+    public override void Trigger()
+    {
         Player.instance.Damage.IncreaseDamage(damageIncrease);
     }
 }

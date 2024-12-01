@@ -399,6 +399,27 @@ TextureImporter:
       name: artifacts_tooltips_13
       rect:
         serializedVersion: 2
+        x: 275
+        y: 401
+        width: 115
+        height: 23
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fab56392e9fbe64597d738da1a525f7
+      internalID: -1225292192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: artifacts_tooltips_14
+      rect:
+        serializedVersion: 2
         x: 0
         y: 369
         width: 156
@@ -410,8 +431,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5fab56392e9fbe64597d738da1a525f7
-      internalID: -1225292192
+      spriteID: 55717b417e7ee8c4ca4af33b217f360d
+      internalID: -1732304648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: artifacts_tooltips_15
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 369
+        width: 96
+        height: 31
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85dcbd385615eec47973db08e10b76d3
+      internalID: -233743992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: artifacts_tooltips_16
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 369
+        width: 138
+        height: 31
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61cf99e28200eaf4891b58ce21091c26
+      internalID: -625237252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: artifacts_tooltips_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 329
+        width: 108
+        height: 39
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ecf272c16734e04d99ffe1740429ae0
+      internalID: -1172540227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: artifacts_tooltips_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 305
+        width: 166
+        height: 23
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3eb9df4f9f77844f9348807cc283b07
+      internalID: 441078225
       vertices: []
       indices: 
       edges: []
@@ -433,6 +538,11 @@ TextureImporter:
       artifacts_tooltips_11: 1689451179
       artifacts_tooltips_12: -535256465
       artifacts_tooltips_13: -1225292192
+      artifacts_tooltips_14: -1732304648
+      artifacts_tooltips_15: -233743992
+      artifacts_tooltips_16: -625237252
+      artifacts_tooltips_17: -1172540227
+      artifacts_tooltips_18: 441078225
       artifacts_tooltips_2: -1893934662
       artifacts_tooltips_3: -676548077
       artifacts_tooltips_4: -1456105769

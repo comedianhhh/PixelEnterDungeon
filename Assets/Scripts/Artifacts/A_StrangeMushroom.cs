@@ -8,7 +8,10 @@ public class A_StrangeMushroom : A_Base
     public override void OnClearRoom()
     {
         triggered = true;
+    }
 
+    public override void Trigger()
+    {
         Player.instance.Health.Heal(healAmount);
     }
 }

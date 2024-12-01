@@ -13,7 +13,10 @@ public class A_JuicyOrange : A_Base
     public override void OnBossDefeated()
     {
         triggered = true;
+    }
 
+    public override void Trigger()
+    {
         Player.instance.Health.Heal(999);
     }
 }

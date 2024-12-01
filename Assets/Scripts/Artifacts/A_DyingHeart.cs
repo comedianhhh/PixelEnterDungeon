@@ -12,8 +12,6 @@ public class A_DyingHeart : A_Base
     public override void OnEnterRoom()
     {
         triggered = true;
-
-        Player.instance.Health.IncreaseHealth(-loseAmount);
     }
     
     public override void OnPickup()
@@ -22,5 +20,10 @@ public class A_DyingHeart : A_Base
 
         Player.instance.Health.IncreaseHealth(hpGain);
         Player.instance.Damage.IncreaseDamage(damageGain);
+    }
+
+    public override void Trigger()
+    {
+        Player.instance.Health.IncreaseHealth(-loseAmount);
     }
 }

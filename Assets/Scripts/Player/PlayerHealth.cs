@@ -2,7 +2,6 @@ using benjohnson;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -22,6 +21,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void Damage(int value)
     {
+        PlayerStats.instance.damageTaken++;
         ArtifactManager.instance.TriggerTakeDamage();
         SoundManager.instance.PlaySound("Player Hurt");
         DamagePopup.CreatePopup(transform.position, value);
@@ -48,6 +48,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void Heal(int value)
     {
+        PlayerStats.instance.healthHealed += value;
         SoundManager.instance.PlaySound("Heal");
         DamagePopup.CreatePopup(transform.position, value, true);
         currentHealth += value;
@@ -72,6 +73,6 @@ public class PlayerHealth : MonoBehaviour
 
     public void Kill()
     {
-        Debug.Log("PLAYER KILLED");
+        GameManager.instance.PlayerKilled();
     }
 }

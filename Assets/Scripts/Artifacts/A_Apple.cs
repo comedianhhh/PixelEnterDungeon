@@ -8,7 +8,10 @@ public class A_Apple : A_Base
     public override void OnPickup()
     {
         triggered = true;
+    }
 
+    public override void Trigger()
+    {
         Player.instance.Health.IncreaseHealth(healthIncrease);
     }
 }

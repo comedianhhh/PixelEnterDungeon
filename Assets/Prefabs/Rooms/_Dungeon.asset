@@ -39,6 +39,27 @@ MonoBehaviour:
     bossRooms:
     - {fileID: 11400000, guid: 6abd55e0d080de94b97cc5587f46ef4f, type: 2}
     - {fileID: 11400000, guid: 277719df1e16be7498210625a30a6250, type: 2}
+  - name: Stage 1
+    rooms:
+    - name: s1d1
+      rooms:
+      - {fileID: 11400000, guid: 80a3fcccb5fef0940873b1949c8f99a0, type: 2}
+      - {fileID: 11400000, guid: 840b5de623dd04f4680750413175d5ba, type: 2}
+      - {fileID: 11400000, guid: aee6fdce3b7e5f4498c457ce6848ea3a, type: 2}
+    - name: s1d2
+      rooms:
+      - {fileID: 11400000, guid: 678d1590428b0f14291167ffcd011d19, type: 2}
+      - {fileID: 11400000, guid: 1606742891e9c494bbcaab2d6b94c765, type: 2}
+      - {fileID: 11400000, guid: 3997a65d7d6918f4ea7bce2c763bd8fb, type: 2}
+    - name: s1d3
+      rooms:
+      - {fileID: 11400000, guid: 9b5a91c8976c7294f9b186369c1aa01d, type: 2}
+      - {fileID: 11400000, guid: 554e5bb72f2fd9044b9563e9816cedb8, type: 2}
+      - {fileID: 11400000, guid: 5f2ef28eeaeae2148b6505845e32c4f4, type: 2}
+      - {fileID: 11400000, guid: 120adffed98b3b745955e21899d0ed98, type: 2}
+    bossRooms:
+    - {fileID: 11400000, guid: 6abd55e0d080de94b97cc5587f46ef4f, type: 2}
+    - {fileID: 11400000, guid: 277719df1e16be7498210625a30a6250, type: 2}
   maxDepth: 3
   maxDoors: 2
   oddsPower: 1.33

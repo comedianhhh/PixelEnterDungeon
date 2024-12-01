@@ -40,6 +40,13 @@ public class DungeonManager : Singleton<DungeonManager>
 
     public void GenerateDungeon(int stage)
     {
+        if (stage > gen.rooms.Count - 1)
+        {
+            GameManager.instance.LoadWinScreen();
+            stage = gen.rooms.Count;
+            return;
+        }
+
         // Generate first room
         CreateRoom(stage, 0, null);
         // Iteratively generate layers

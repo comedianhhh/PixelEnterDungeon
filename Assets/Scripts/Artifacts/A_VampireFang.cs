@@ -9,7 +9,10 @@ public class A_VampireFang : A_Base
     public override void OnKillEnemy()
     {
         triggered = true;
+    }
 
+    public override void Trigger()
+    {
         Player.instance.Health.Heal(healAmount);
     }
 }

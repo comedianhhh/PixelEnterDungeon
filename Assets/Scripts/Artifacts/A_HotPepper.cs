@@ -12,10 +12,11 @@ public class A_HotPepper : A_Base
     {
         bool passed = Utilities.TestProbability(probability);
         if (passed)
-        {
             triggered = true;
+    }
 
-            Player.instance.Damage.IncreaseDamage(damageIncrease);
-        }
+    public override void Trigger()
+    {
+        Player.instance.Damage.IncreaseDamage(damageIncrease);
     }
 }

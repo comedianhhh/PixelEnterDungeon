@@ -8,7 +8,10 @@ public class A_ShinyEgg : A_Base
     public override void OnTakeDamage()
     {
         triggered = true;
+    }
 
+    public override void Trigger()
+    {
         Player.instance.Health.Heal(healAmount);
     }
 }
