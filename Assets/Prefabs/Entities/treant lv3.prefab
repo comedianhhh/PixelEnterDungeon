@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1677787411193452743}
   - component: {fileID: 4606210757823977908}
   m_Layer: 0
-  m_Name: torment lv2
+  m_Name: treant lv3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a4460c89f00d0049b9441e1f3cb84bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 35
+  maxHealth: 24
   deathEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b998269cfa79a418cb8cb63f937b97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 6
+  damage: 3
   counter: {fileID: 8395779358675097679}
 --- !u!114 &4606210757823977908
 MonoBehaviour:
@@ -160,8 +160,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78531e1e29a86814da1a1e7df81c26ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amount: 25
-  rand: 5
+  amount: 18
+  rand: 4
   coinPrefab: {fileID: 3946428023895682049, guid: 6d869c8f8e1e23d4b93f5c087a2fe142, type: 3}
 --- !u!1 &7229823095076977633
 GameObject:
@@ -239,7 +239,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: -1400110165, guid: d986365ae2e6eff4fbb6ab61548256a6, type: 3}
+  m_Sprite: {fileID: 852146558, guid: d986365ae2e6eff4fbb6ab61548256a6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

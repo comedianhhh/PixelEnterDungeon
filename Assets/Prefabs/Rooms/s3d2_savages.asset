@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: s3d2_savages
   m_EditorClassIdentifier: 
   entities:
+  - {fileID: 5931461512106533215, guid: 449384252b53b604ea22983977dee468, type: 3}
   - {fileID: 5931461512106533215, guid: 6ad999f8c57029b4c8ef8a4d2b1874a9, type: 3}
   - {fileID: 5931461512106533215, guid: 6ad999f8c57029b4c8ef8a4d2b1874a9, type: 3}
+  - {fileID: 5931461512106533215, guid: 449384252b53b604ea22983977dee468, type: 3}

@@ -87,6 +87,7 @@ MonoBehaviour:
     rooms:
     - rooms:
       - {fileID: 11400000, guid: e5f9ed2fdeeaad44a8d8db3316a4c7cf, type: 2}
+      - {fileID: 11400000, guid: 0f57a4baacce8f24098d55ba4aff8de1, type: 2}
     - rooms:
       - {fileID: 11400000, guid: 48502c1faf67a7344a6f2af0fba25a76, type: 2}
       - {fileID: 11400000, guid: ddc5e8514c8f6a54397f1e9f9185f0ed, type: 2}

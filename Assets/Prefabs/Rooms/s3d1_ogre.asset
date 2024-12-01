@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: s3d1_ogre
   m_EditorClassIdentifier: 
   entities:
-  - {fileID: 5931461512106533215, guid: 98870cd455374674ea4cdff2adeae1d9, type: 3}
-  - {fileID: 5931461512106533215, guid: 98870cd455374674ea4cdff2adeae1d9, type: 3}
+  - {fileID: 5931461512106533215, guid: 38bb53f780e436a46888a945ce78c85d, type: 3}
   - {fileID: 5931461512106533215, guid: 222d3a0368959334cb52e934e8218e5b, type: 3}
+  - {fileID: 5931461512106533215, guid: 38bb53f780e436a46888a945ce78c85d, type: 3}
