@@ -19,7 +19,7 @@ public class DungeonManager : Singleton<DungeonManager>
 
     [Header("Components")]
     [SerializeField] DungeonMapRenderer mapRenderer;
-    ArrangeGrid gridLayout;
+    [HideInInspector] public ArrangeGrid gridLayout;
 
     protected override void Awake()
     {
@@ -141,6 +141,8 @@ public class DungeonManager : Singleton<DungeonManager>
 
         // Display
         mapRenderer.DisplayMap(rooms, currentRoom);
+
+        //TESTPORTAL();
     }
 
     /// <summary>
@@ -246,5 +248,17 @@ public class DungeonManager : Singleton<DungeonManager>
         gridLayout.Arrange();
 
         ArtifactManager.instance.TriggerBossDefeated();
+    }
+
+    public void TESTPORTAL()
+    {
+        if (portalGenerated) return;
+
+        EC_Entity portal = SpawnEntity(gen.portalPrefab, rooms[0]);
+        portal.IsEnabled(true);
+        portalGenerated = true;
+        gridLayout.Arrange();
+
+        Player.instance.Wallet.AddMoney(200);
     }
 }

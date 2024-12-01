@@ -37,11 +37,15 @@ public class PlayerHealth : MonoBehaviour
     public void IncreaseHealth(int increase)
     {
         maxHealth += increase;
-        currentHealth += increase;
+        if (increase > 0)
+            currentHealth += increase;
+        if (currentHealth > maxHealth)
+            currentHealth = maxHealth;
         if (maxHealth < 0)
+        {
             maxHealth = 0;
-        if (currentHealth < 0)
-            currentHealth = 0;
+            Kill();
+        }
         UpdateCurrent();
         UpdateMax();
     }

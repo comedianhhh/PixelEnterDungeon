@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a4460c89f00d0049b9441e1f3cb84bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 16
+  maxHealth: 15
   deathEvent:
     m_PersistentCalls:
       m_Calls:
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b998269cfa79a418cb8cb63f937b97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  damage: 4
   counter: {fileID: 8395779358675097679}
 --- !u!114 &4606210757823977908
 MonoBehaviour:

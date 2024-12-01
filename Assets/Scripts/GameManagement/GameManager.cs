@@ -50,7 +50,7 @@ public class GameManager : Singleton<GameManager>
     public void LoadNextStage()
     {
         stage++;
-        PlayerStats.instance.stage = stage;
+        PlayerStats.instance.stage = stage + 1;
 
         // Unload shop
         SceneManager.instance.UnloadScene(4);
