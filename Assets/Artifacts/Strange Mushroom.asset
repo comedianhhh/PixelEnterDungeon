@@ -16,4 +16,4 @@ MonoBehaviour:
   tooltip: {fileID: -676548077, guid: 5a6a6c5257fc377479907d96b30ef32c, type: 3}
   cost: 100
   triggered: 0
-  healAmount: 7
+  healAmount: 9

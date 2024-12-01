@@ -10,7 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 81822b26c2c2894459a7466811c9d50f, type: 3}
-  m_Name: s1d3_cyclops
+  m_Name: s3d1_zombies
   m_EditorClassIdentifier: 
   entities:
-  - {fileID: 5931461512106533215, guid: 05aeb8a1ab7178b4b8a26d1eb166b74b, type: 3}
+  - {fileID: 5931461512106533215, guid: 4850f73c0141bc447bde4bd6f5e7ba66, type: 3}
+  - {fileID: 5931461512106533215, guid: 4850f73c0141bc447bde4bd6f5e7ba66, type: 3}

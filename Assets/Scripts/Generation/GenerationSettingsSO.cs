@@ -22,7 +22,6 @@ public class GenerationSettingsSO : ScriptableObject
     [System.Serializable]
     public class RoomGroup
     {
-        public string name;
         public List<RoomSO> rooms;
     }
 

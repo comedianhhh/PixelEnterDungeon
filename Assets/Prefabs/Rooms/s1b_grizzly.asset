@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: s1b_grizzly
   m_EditorClassIdentifier: 
   entities:
+  - {fileID: 5931461512106533215, guid: a9dcdb9a835d96d4d951376c312c44ee, type: 3}
   - {fileID: 5931461512106533215, guid: 126f70cd245edd947b559d964aaa146a, type: 3}
+  - {fileID: 5931461512106533215, guid: a9dcdb9a835d96d4d951376c312c44ee, type: 3}

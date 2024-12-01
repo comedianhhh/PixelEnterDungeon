@@ -34,7 +34,7 @@ namespace benjohnson
 
         public void PlayMusic(int i)
         {
-            musicSource.PlayOneShot(music[i].Clip(), clips[i].volume);
+            musicSource.PlayOneShot(music[i].Clip(), music[i].volume);
         }
     }
 
