@@ -51,13 +51,13 @@ public class DungeonMapRenderer : MonoBehaviour
 };
     string[] skull = new string[]
     {
-        "xxxxxxx",
-        "xoxoxxx",
-        "xooooox",
-        "xxoxoox",
-        "xooooox",
         "xxoooxx",
-        "xxxxxxx"
+        "xooxoox",
+        "oxxoxxo",
+        "oxxoxxo",
+        "ooooooo",
+        "ooooooo",
+        "xooooox"
     };
     string[] xmark = new string[]
     {
