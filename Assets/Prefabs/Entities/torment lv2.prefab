@@ -14,9 +14,8 @@ GameObject:
   - component: {fileID: 3603563806113549388}
   - component: {fileID: 1677787411193452743}
   - component: {fileID: 4606210757823977908}
-  - component: {fileID: 2179898481230885368}
   m_Layer: 0
-  m_Name: vampire lv2
+  m_Name: torment lv2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127,73 +126,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a4460c89f00d0049b9441e1f3cb84bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 18
+  maxHealth: 35
   deathEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2179898481230885368}
-        m_TargetAssemblyTypeName: EC_Spawner, Scripts
-        m_MethodName: Spawn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2179898481230885368}
-        m_TargetAssemblyTypeName: EC_Spawner, Scripts
-        m_MethodName: Spawn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2179898481230885368}
-        m_TargetAssemblyTypeName: EC_Spawner, Scripts
-        m_MethodName: Spawn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2179898481230885368}
-        m_TargetAssemblyTypeName: EC_Spawner, Scripts
-        m_MethodName: Spawn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   damageEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2179898481230885368}
-        m_TargetAssemblyTypeName: EC_Spawner, Scripts
-        m_MethodName: Spawn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   counter: {fileID: 6540063541809874978}
 --- !u!114 &1677787411193452743
 MonoBehaviour:
@@ -207,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b998269cfa79a418cb8cb63f937b97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 4
+  damage: 6
   counter: {fileID: 8395779358675097679}
 --- !u!114 &4606210757823977908
 MonoBehaviour:
@@ -221,22 +160,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78531e1e29a86814da1a1e7df81c26ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amount: 17
-  rand: 4
+  amount: 25
+  rand: 5
   coinPrefab: {fileID: 3946428023895682049, guid: 6d869c8f8e1e23d4b93f5c087a2fe142, type: 3}
---- !u!114 &2179898481230885368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5931461512106533215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e819c49c753bfbf468ad5239be000bff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  entity: {fileID: 5931461512106533215, guid: e13a94569965d944c925ce391cca0edd, type: 3}
 --- !u!1 &7229823095076977633
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,7 +239,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: -1900840183, guid: d986365ae2e6eff4fbb6ab61548256a6, type: 3}
+  m_Sprite: {fileID: -1400110165, guid: d986365ae2e6eff4fbb6ab61548256a6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

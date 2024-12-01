@@ -909,7 +909,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab16e35750853c34e9075c345728f4ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 3
+  damage: 4
   counter: {fileID: 2077909853}
 --- !u!114 &1440973759
 MonoBehaviour:
@@ -923,7 +923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3656bedafb7f94d449113b2f5acef25e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 35
+  maxHealth: 40
   cCounter: {fileID: 505066434}
   mCounter: {fileID: 1110239876}
 --- !u!114 &1440973760

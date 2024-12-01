@@ -71,16 +71,31 @@ MonoBehaviour:
     - {fileID: 11400000, guid: fb7bcc4243440ed46933a8846dd64f65, type: 2}
   - name: Stage 4
     rooms:
-    - rooms: []
-    - rooms: []
-    - rooms: []
-    bossRooms: []
+    - rooms:
+      - {fileID: 11400000, guid: a0fe48bd17198c048a229953c3db6b0a, type: 2}
+      - {fileID: 11400000, guid: b3a21ead5fb460542936090e87296c80, type: 2}
+    - rooms:
+      - {fileID: 11400000, guid: 5d1526ed96ca1a8488cbb3881895147c, type: 2}
+      - {fileID: 11400000, guid: 78b5849039291984094c3932058c3e6f, type: 2}
+    - rooms:
+      - {fileID: 11400000, guid: ca071124561858342baa567589868d75, type: 2}
+      - {fileID: 11400000, guid: 85f4b393f2a12994e9d1587aa23308c8, type: 2}
+    bossRooms:
+    - {fileID: 11400000, guid: 51a479bd3274c84499ef0f33d13ccbef, type: 2}
+    - {fileID: 11400000, guid: c8e131e633d9fcd429146bfd02ec7d93, type: 2}
   - name: Stage 5
     rooms:
-    - rooms: []
-    - rooms: []
-    - rooms: []
-    bossRooms: []
+    - rooms:
+      - {fileID: 11400000, guid: e5f9ed2fdeeaad44a8d8db3316a4c7cf, type: 2}
+    - rooms:
+      - {fileID: 11400000, guid: 48502c1faf67a7344a6f2af0fba25a76, type: 2}
+      - {fileID: 11400000, guid: ddc5e8514c8f6a54397f1e9f9185f0ed, type: 2}
+    - rooms:
+      - {fileID: 11400000, guid: 42314469ca88f354ba824ab8b0d1895d, type: 2}
+      - {fileID: 11400000, guid: 8c84fa8b91c32a245b73da1edf358963, type: 2}
+    bossRooms:
+    - {fileID: 11400000, guid: 0c0d2a44d4d4a834fa69265cd909dd28, type: 2}
+    - {fileID: 11400000, guid: 3170f28b1b080ec4f90c43b184da8726, type: 2}
   maxDepth: 3
   maxDoors: 2
   oddsPower: 1.33
