@@ -20,46 +20,83 @@ MonoBehaviour:
   rooms:
   - name: Stage 1
     rooms:
-    - name: s1d1
-      rooms:
+    - rooms:
       - {fileID: 11400000, guid: 80a3fcccb5fef0940873b1949c8f99a0, type: 2}
       - {fileID: 11400000, guid: 840b5de623dd04f4680750413175d5ba, type: 2}
       - {fileID: 11400000, guid: aee6fdce3b7e5f4498c457ce6848ea3a, type: 2}
-    - name: s1d2
-      rooms:
+    - rooms:
       - {fileID: 11400000, guid: 678d1590428b0f14291167ffcd011d19, type: 2}
       - {fileID: 11400000, guid: 1606742891e9c494bbcaab2d6b94c765, type: 2}
       - {fileID: 11400000, guid: 3997a65d7d6918f4ea7bce2c763bd8fb, type: 2}
-    - name: s1d3
-      rooms:
+    - rooms:
       - {fileID: 11400000, guid: 9b5a91c8976c7294f9b186369c1aa01d, type: 2}
-      - {fileID: 11400000, guid: 554e5bb72f2fd9044b9563e9816cedb8, type: 2}
       - {fileID: 11400000, guid: 5f2ef28eeaeae2148b6505845e32c4f4, type: 2}
       - {fileID: 11400000, guid: 120adffed98b3b745955e21899d0ed98, type: 2}
     bossRooms:
     - {fileID: 11400000, guid: 6abd55e0d080de94b97cc5587f46ef4f, type: 2}
     - {fileID: 11400000, guid: 277719df1e16be7498210625a30a6250, type: 2}
-  - name: Stage 1
+  - name: Stage 2
     rooms:
-    - name: s1d1
-      rooms:
-      - {fileID: 11400000, guid: 80a3fcccb5fef0940873b1949c8f99a0, type: 2}
-      - {fileID: 11400000, guid: 840b5de623dd04f4680750413175d5ba, type: 2}
-      - {fileID: 11400000, guid: aee6fdce3b7e5f4498c457ce6848ea3a, type: 2}
-    - name: s1d2
-      rooms:
-      - {fileID: 11400000, guid: 678d1590428b0f14291167ffcd011d19, type: 2}
-      - {fileID: 11400000, guid: 1606742891e9c494bbcaab2d6b94c765, type: 2}
-      - {fileID: 11400000, guid: 3997a65d7d6918f4ea7bce2c763bd8fb, type: 2}
-    - name: s1d3
-      rooms:
-      - {fileID: 11400000, guid: 9b5a91c8976c7294f9b186369c1aa01d, type: 2}
-      - {fileID: 11400000, guid: 554e5bb72f2fd9044b9563e9816cedb8, type: 2}
-      - {fileID: 11400000, guid: 5f2ef28eeaeae2148b6505845e32c4f4, type: 2}
-      - {fileID: 11400000, guid: 120adffed98b3b745955e21899d0ed98, type: 2}
+    - rooms:
+      - {fileID: 11400000, guid: a60fe8a18509d0f4eb3f683005c9dcf6, type: 2}
+      - {fileID: 11400000, guid: d35a3958c2ee7124b89a7a38965aca99, type: 2}
+      - {fileID: 11400000, guid: 83c11904c78a8044195ceaa9f1ee3805, type: 2}
+    - rooms:
+      - {fileID: 11400000, guid: abccbbc480fba7641ac1a1e8333e8346, type: 2}
+      - {fileID: 11400000, guid: a94cf8eff44e07a41887b2f51d9d95d5, type: 2}
+      - {fileID: 11400000, guid: 00ba02eff3846d74bbfeaac36ba51d9c, type: 2}
+    - rooms:
+      - {fileID: 11400000, guid: da09005ea2b9cc54497b2427b9515697, type: 2}
+      - {fileID: 11400000, guid: a6e69143947cc034389bc098abfc49dc, type: 2}
+      - {fileID: 11400000, guid: 4f9b1e381465f724d8acadfb026af406, type: 2}
     bossRooms:
-    - {fileID: 11400000, guid: 6abd55e0d080de94b97cc5587f46ef4f, type: 2}
-    - {fileID: 11400000, guid: 277719df1e16be7498210625a30a6250, type: 2}
+    - {fileID: 11400000, guid: 79031c68fe92ba547b7c50284b0ad1b3, type: 2}
+    - {fileID: 11400000, guid: 957075ded8063164699df76e72fa9d77, type: 2}
+  - name: Stage 3
+    rooms:
+    - rooms:
+      - {fileID: 11400000, guid: 22e273cf96b759c469c411234711ed02, type: 2}
+      - {fileID: 11400000, guid: 7c4b9d72b365f244e8b5f32d142da97c, type: 2}
+      - {fileID: 11400000, guid: 0206843781f17214fb7272bfa8eecf2d, type: 2}
+    - rooms:
+      - {fileID: 11400000, guid: 18a491a331d3d9d438e5a6e4527efd25, type: 2}
+      - {fileID: 11400000, guid: 5e8b8a2ab570a134eaa670b782f83384, type: 2}
+      - {fileID: 11400000, guid: 1f8e2669907bd7b418069c783135f5a0, type: 2}
+    - rooms:
+      - {fileID: 11400000, guid: 39e1c1d4da2b585409b00dd3eb672964, type: 2}
+      - {fileID: 11400000, guid: 045574ca9e54fa4479f73786e673bfdd, type: 2}
+      - {fileID: 11400000, guid: 109a0b7b5286ba546b0181f6f5f2fc65, type: 2}
+    bossRooms:
+    - {fileID: 11400000, guid: ddbe255a739647241a0bcd469c049afb, type: 2}
+    - {fileID: 11400000, guid: fb7bcc4243440ed46933a8846dd64f65, type: 2}
+  - name: Stage 4
+    rooms:
+    - rooms:
+      - {fileID: 11400000, guid: a0fe48bd17198c048a229953c3db6b0a, type: 2}
+      - {fileID: 11400000, guid: b3a21ead5fb460542936090e87296c80, type: 2}
+    - rooms:
+      - {fileID: 11400000, guid: 5d1526ed96ca1a8488cbb3881895147c, type: 2}
+      - {fileID: 11400000, guid: 78b5849039291984094c3932058c3e6f, type: 2}
+    - rooms:
+      - {fileID: 11400000, guid: ca071124561858342baa567589868d75, type: 2}
+      - {fileID: 11400000, guid: 85f4b393f2a12994e9d1587aa23308c8, type: 2}
+    bossRooms:
+    - {fileID: 11400000, guid: 51a479bd3274c84499ef0f33d13ccbef, type: 2}
+    - {fileID: 11400000, guid: c8e131e633d9fcd429146bfd02ec7d93, type: 2}
+  - name: Stage 5
+    rooms:
+    - rooms:
+      - {fileID: 11400000, guid: e5f9ed2fdeeaad44a8d8db3316a4c7cf, type: 2}
+      - {fileID: 11400000, guid: 0f57a4baacce8f24098d55ba4aff8de1, type: 2}
+    - rooms:
+      - {fileID: 11400000, guid: 48502c1faf67a7344a6f2af0fba25a76, type: 2}
+      - {fileID: 11400000, guid: ddc5e8514c8f6a54397f1e9f9185f0ed, type: 2}
+    - rooms:
+      - {fileID: 11400000, guid: 42314469ca88f354ba824ab8b0d1895d, type: 2}
+      - {fileID: 11400000, guid: 8c84fa8b91c32a245b73da1edf358963, type: 2}
+    bossRooms:
+    - {fileID: 11400000, guid: 0c0d2a44d4d4a834fa69265cd909dd28, type: 2}
+    - {fileID: 11400000, guid: 3170f28b1b080ec4f90c43b184da8726, type: 2}
   maxDepth: 3
   maxDoors: 2
   oddsPower: 1.33

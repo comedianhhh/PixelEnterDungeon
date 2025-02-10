@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81822b26c2c2894459a7466811c9d50f, type: 3}
+  m_Name: s5b_skeleton_army
+  m_EditorClassIdentifier: 
+  entities:
+  - {fileID: 5931461512106533215, guid: 089e4611e1833c049852ab65191452ba, type: 3}
+  - {fileID: 5931461512106533215, guid: bf8d812f7bf8f7844bf476d58de8b155, type: 3}
+  - {fileID: 5931461512106533215, guid: 444ecd474c29b9547891aeb1d2fca521, type: 3}
+  - {fileID: 5931461512106533215, guid: 7205086be834674488a4ecbdd8ce32a8, type: 3}
+  - {fileID: 5931461512106533215, guid: bf8d812f7bf8f7844bf476d58de8b155, type: 3}
+  - {fileID: 5931461512106533215, guid: 089e4611e1833c049852ab65191452ba, type: 3}

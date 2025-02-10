@@ -16,4 +16,4 @@ MonoBehaviour:
   tooltip: {fileID: -2038685811, guid: 5a6a6c5257fc377479907d96b30ef32c, type: 3}
   cost: 75
   triggered: 0
-  damageIncrease: 2
+  damageIncrease: 5

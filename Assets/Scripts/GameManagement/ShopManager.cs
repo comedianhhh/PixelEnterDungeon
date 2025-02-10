@@ -20,6 +20,8 @@ public class ShopManager : Singleton<ShopManager>
     }
     void Start()
     {
+        if (GameManager.instance.stage >= 4)
+            GameManager.instance.LoadWinScreen();
         LoadShop();
     }
 

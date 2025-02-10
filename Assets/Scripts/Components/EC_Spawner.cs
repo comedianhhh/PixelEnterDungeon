@@ -8,5 +8,6 @@ public class EC_Spawner : MonoBehaviour
     {
         EC_Entity _entity = DungeonManager.instance.SpawnEntity(entity, DungeonManager.instance.CurrentRoom);
         _entity.IsEnabled(true);
+        DungeonManager.instance.gridLayout.Arrange();
     }
 }

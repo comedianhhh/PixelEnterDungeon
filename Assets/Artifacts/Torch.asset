@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: -1921682515, guid: 5f96ac13ecbb87b4ea25cd6068b0b28e, type: 3}
   tooltip: {fileID: -2142438908, guid: 5a6a6c5257fc377479907d96b30ef32c, type: 3}
-  cost: 100
+  cost: 75
   triggered: 0
   damage: 2
