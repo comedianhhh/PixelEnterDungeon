@@ -12,7 +12,7 @@ public class Coin : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(Random.Range(-startSpeed, startSpeed), Random.Range(startSpeed * 0.75f, startSpeed * 1.25f));
+        rb.linearVelocity = new Vector2(Random.Range(-startSpeed, startSpeed), Random.Range(startSpeed * 0.75f, startSpeed * 1.25f));
     }
 
     void Update()
